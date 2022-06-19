@@ -17,3 +17,7 @@ python orb.py
 ```sh
 python sprite.py
 ```
+
+# LICENSE
+
+gpl 3.0
