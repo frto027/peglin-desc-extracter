@@ -1,4 +1,5 @@
 import pathlib
+import re
 import config
 import yaml
 
@@ -36,9 +37,26 @@ with Sprites_png.open('rb') as f:
     with TARGET_PNG.open('wb') as t:
         t.write(f.read())
 
+
+# styles
+
+style_css = ''
+
+with (PROJECT_PATH / 'Assets' / 'MonoBehaviour' / 'PeglinStyleSheet.asset').open('r',encoding='utf8') as f:
+    for style in yaml.load(f,Loader=yaml.BaseLoader)['MonoBehaviour']['m_StyleList']:
+        # print(style['m_Name'], style['m_OpeningDefinition'])
+        gp = re.match(r'\<color=(#[a-f0-9A-F]+)\>',style['m_OpeningDefinition'])
+        if gp:
+            name = style['m_Name']
+            color = gp[1]
+            # print(name, color)
+            style_css += '.pg_style_' + name + '{color:' + color + '}\n'
+
+
 # generate css
 
 with TARGET_CSS.open('w',encoding='utf8') as f:
+    f.write(style_css)
     f.write("""
 .pg_sprite{
     image-rendering:pixelated;
