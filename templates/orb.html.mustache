@@ -1,17 +1,42 @@
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="pg_sprite.css">
-        <link rel="stylesheet" type="text/css" href="pg_orb_sprite.css">
-    </head>
-    <body>
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="pg_sprite.css">
+    <link rel="stylesheet" type="text/css" href="pg_orb_sprite.css">
+
+  </head>
+  <body>
+    <div class="container">
+        <h1>弹珠列表</h1>
+        <hr>
+        <div class="row row-cols-auto">
         {{#orbs}}
-            <div class="orb_pic_{{sprite}}"></div>
-            <b>{{name}}({{level}})</b><br>
-            <div class='pg_sprite pg_sprite_PEG'></div>{{dmg}}|<div class='pg_sprite pg_sprite_CRIT_PEG'></div>{{cdmg}}<br>
-            {{#descs}}
-                {{{desc}}} <br>
-            {{/descs}}
-            <hr/>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="orb_pic_{{sprite}}"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">{{name}}({{level}})</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{dmg}}&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{cdmg}}</p>
+                </div>
+
+                    {{#descs}}
+                        <div style="margin-top:3px"> {{{desc}}} </div>
+                    {{/descs}}
+                </div>
+            </div>
+            </div>
         {{/orbs}}
-    </body>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
 </html>
