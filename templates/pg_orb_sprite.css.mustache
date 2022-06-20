@@ -1,7 +1,14 @@
 {{#assets}}
 .orb_pic_{{style}}{
     background-image: url("pg_assets/{{file}}");
+    {{^has_rect}}
+    width:{{width}}px;
+    height:{{height}}px;
+    {{/has_rect}}
     {{#has_rect}}
+    width:{{rect.width}}px;
+    height:{{rect.height}}px;
+    background-position: -{{rect.left}}px -{{rect.top}}px;
     {{/has_rect}}
 }
 {{/assets}}

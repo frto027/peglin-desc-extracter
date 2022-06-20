@@ -7,6 +7,7 @@ from unittest import loader
 import yaml
 import config
 import chevron
+import cv2
 
 PROJECT_PATH = config.PROJECT_PATH
 
@@ -115,16 +116,17 @@ else:
             asset_path = guid_map[asset_guid]['filename']
             asset_file = sprite_obj["m_Sprite"]['fileID']
 
+            # read img height and width 
+            (asset_h, asset_w, _) = cv2.imread(str(PROJECT_PATH / 'Assets' / 'Texture2D'/ asset_path)).shape
             style_name = asset_path[:-4] + '_' + asset_file
             style_has_rect = False
             style_rect = None
             if asset_file in guid_map[asset_guid]['sheets']:
                 style_has_rect = True
                 rect = guid_map[asset_guid]['sheets'][asset_file]
-                # TODO: height is not right
                 style_rect = {
                     'left' : rect['x'],
-                    'top' : rect['y'],
+                    'top' : str(asset_h - float(rect['y']) - float(rect['height'])),
                     'width':rect['width'],
                     'height' : rect['height'],
                 }
@@ -133,7 +135,9 @@ else:
                     'style' : style_name,
                     'file':asset_path,
                     'has_rect':style_has_rect,
-                    'rect':style_rect
+                    'rect':style_rect,
+                    'width':asset_w,
+                    'height':asset_h,
                 }
 
             args = dict()
