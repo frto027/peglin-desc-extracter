@@ -3,6 +3,7 @@
 import json
 import pathlib
 import re
+from unittest import loader
 import yaml
 import config
 import chevron
@@ -38,11 +39,53 @@ def parse_desc(desc, dict = {}):
     desc = desc.replace('\n','<br/>', -1)
     return desc
 #orb name -> [orb desc(level1), orb desc(level2), orb desc(level3)]
-orb_data = dict()
+
+################ build guid -> png file name map ##############
+
+guid_map = dict()
+guid_map_buffer = pathlib.Path('buffers/guid_map.json')
+generated_sprites_css = dict()
+generated_sprites_css_buffer = pathlib.Path('buffers/guid_map_css.json')
+if generated_sprites_css_buffer.exists():
+    generated_sprites_css = json.loads(generated_sprites_css_buffer.open('r',encoding='utf8').read())
+
+if guid_map_buffer.exists():
+    with guid_map_buffer.open('r',encoding='utf8') as f:
+        guid_map = json.loads(f.read())
+else:
+    for metafile in (PROJECT_PATH / 'Assets' / 'Texture2D').glob('*.meta'):
+        with metafile.open('r',encoding='utf8') as f:
+            obj = yaml.load(f, yaml.BaseLoader)
+
+            internal_dict = []
+            for item in obj['TextureImporter']["internalIDToNameTable"]:
+                internal_dict.append({
+                    'name': item['first']['213']
+                })
+
+            for i in range(len(internal_dict)):
+                rect = obj['TextureImporter']['spriteSheet']['sprites'][i]['rect']
+                internal_dict[i]['rect'] = rect
+            
+            sheets = dict()
+            for s in internal_dict:
+                sheets[s['name']] = s['rect']
+
+            guid = obj['guid']
+            guid_map[guid] = {
+                'filename':metafile.name[:-5],
+                'sheets':sheets
+            }
+    with guid_map_buffer.open('w',encoding='utf8') as f:
+        f.write(json.dumps(guid_map))
+
+################ generate orb info #########################
 
 orb_info = []
+orb_infobuffer = pathlib.Path('buffers/orb_buffer.json')
 
-orb_infobuffer = pathlib.Path('orb_buffer.json')
+used_assets = set()
+
 if orb_infobuffer.exists():
     with orb_infobuffer.open('r', encoding='utf8') as f:
         orb_info = json.loads(f.read())
@@ -51,24 +94,47 @@ else:
         if not '-Lv' in orbfile.name:
             continue
         with orbfile.open('r', encoding='utf8') as f:
-            txt = ""
-            for line in f.readlines():
-                if line.startswith('---'):
-                    txt += '---\n'
-                    continue
-                txt += line
+
             
             args_obj = None
             desc_obj = None
+            sprite_obj = None
 
-            for orb in yaml.load_all(txt, Loader=yaml.BaseLoader):
+            for orb in yaml.load_all(config.purge(f), Loader=yaml.BaseLoader):
                 if "MonoBehaviour" in orb:
                     target = orb["MonoBehaviour"]
                     if "locNameString" in target and "locDescStrings" in target:
                         desc_obj = target
                     if "_Params" in target:
                         args_obj = target
+                if "SpriteRenderer" in orb and not sprite_obj:
+                    sprite_obj = orb["SpriteRenderer"]
             assert desc_obj, orbfile
+            assert sprite_obj, orbfile
+            asset_guid = sprite_obj["m_Sprite"]["guid"]
+            asset_path = guid_map[asset_guid]['filename']
+            asset_file = sprite_obj["m_Sprite"]['fileID']
+
+            style_name = asset_path[:-4] + '_' + asset_file
+            style_has_rect = False
+            style_rect = None
+            if asset_file in guid_map[asset_guid]['sheets']:
+                style_has_rect = True
+                rect = guid_map[asset_guid]['sheets'][asset_file]
+                # TODO: height is not right
+                style_rect = {
+                    'left' : rect['x'],
+                    'top' : rect['y'],
+                    'width':rect['width'],
+                    'height' : rect['height'],
+                }
+            if not style_name in generated_sprites_css:
+                generated_sprites_css[style_name] = {
+                    'style' : style_name,
+                    'file':asset_path,
+                    'has_rect':style_has_rect,
+                    'rect':style_rect
+                }
 
             args = dict()
             if args_obj:
@@ -88,7 +154,12 @@ else:
                 "dmg" : desc_obj["DamagePerPeg"],
                 "cdmg" : desc_obj["CritDamagePerPeg"],
                 "descs":descs,
+                "sprite_guid" : asset_guid,
+                "sprite" : style_name
             })
+
+            if not asset_path in used_assets:
+                used_assets.add(asset_path)
 
             # print(name + "(level " + level + ")" + "|" + dmg + "|" + cdmg + "|" + desc)
 
@@ -99,10 +170,36 @@ else:
             # gentxt += '<hr/>'
     with orb_infobuffer.open('w',encoding='utf8') as f:
         f.write(json.dumps(orb_info))
-        
+    
+    with generated_sprites_css_buffer.open('w', encoding='utf8') as f:
+        f.write(json.dumps(generated_sprites_css))
+
+########## generate orb sprite css ##############
+
+with open('docs/pg_orb_sprite.css','w', encoding='utf8') as f:
+    with open('templates/pg_orb_sprite.css.mustache','r', encoding='utf8') as template:
+        f.write(chevron.render(template, {
+            'assets' :list(generated_sprites_css.values())
+        }))
+
+
+########## copy assets ##########
+
+doc_assets = pathlib.Path('docs') / 'pg_assets'
+
+if not doc_assets.exists():
+    doc_assets.mkdir()
+for png in used_assets:
+    fr = PROJECT_PATH / 'Assets' / 'Texture2D'/ png
+    to = doc_assets / png
+    with fr.open('rb') as f:
+        with to.open('wb') as t:
+            t.write(f.read())
+
+
+
 with open('docs/orb.html','w',encoding='utf8') as f:
     with open('templates/orb.html.mustache','r',encoding='utf8') as template:
         f.write(chevron.render(template, {"orbs":orb_info}))
-        # f.write(template.read().replace('[[[ORB_LIST]]]',gentxt))
 
 
