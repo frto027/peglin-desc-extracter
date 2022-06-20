@@ -15,6 +15,8 @@ I2Language = PROJECT_PATH / 'Assets' / 'Resources' / 'I2Languages.asset'
 
 ORBS_FOLDER = PROJECT_PATH / 'Assets' / 'Resources'/ 'prefabs' / 'orbs'
 
+orb_sprite_height_limit = 32
+
 term_maps = dict()
 
 language_id = 8
@@ -124,13 +126,22 @@ else:
             if asset_file in guid_map[asset_guid]['sheets']:
                 style_has_rect = True
                 rect = guid_map[asset_guid]['sheets'][asset_file]
+                
+                scale = orb_sprite_height_limit / float(rect['height'])
+                margin = (orb_sprite_height_limit - float(rect['height']))/2
+
                 style_rect = {
                     'left' : rect['x'],
                     'top' : str(asset_h - float(rect['y']) - float(rect['height'])),
                     'width':rect['width'],
                     'height' : rect['height'],
+                    'scale' : scale,
+                    'margin':margin
                 }
             if not style_name in generated_sprites_css:
+                scale = orb_sprite_height_limit / asset_h
+                margin = (orb_sprite_height_limit - asset_h)/2
+
                 generated_sprites_css[style_name] = {
                     'style' : style_name,
                     'file':asset_path,
@@ -138,6 +149,8 @@ else:
                     'rect':style_rect,
                     'width':asset_w,
                     'height':asset_h,
+                    'scale':scale,
+                    'margin':margin,
                 }
 
             args = dict()

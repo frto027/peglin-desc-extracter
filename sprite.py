@@ -32,6 +32,7 @@ with Sprites.open("r", encoding='utf8') as f:
     for g in table:
         target = dict(glyphs[g['m_GlyphIndex']])
         target['scale'] = g['m_Scale']
+        target['margin'] = float(target['height']) * (float(target['scale']) - 1) / 2
         indexed_glyphs[g['m_Name']] = target
     # print(indexed_glyphs)
 

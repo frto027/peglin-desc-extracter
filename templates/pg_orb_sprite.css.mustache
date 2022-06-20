@@ -1,14 +1,19 @@
 {{#assets}}
 .orb_pic_{{style}}{
+    image-rendering:pixelated;
     background-image: url("pg_assets/{{file}}");
     {{^has_rect}}
     width:{{width}}px;
     height:{{height}}px;
+    transform:scale({{scale}});
+    margin:{{margin}}px;
     {{/has_rect}}
     {{#has_rect}}
     width:{{rect.width}}px;
     height:{{rect.height}}px;
     background-position: -{{rect.left}}px -{{rect.top}}px;
+    transform:scale({{rect.scale}});
+    margin:{{rect.margin}}px;
     {{/has_rect}}
 }
 {{/assets}}
