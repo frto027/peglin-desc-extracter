@@ -1,7 +1,7 @@
 # 安装依赖
 
 ```sh
-python -m pip install pyyaml
+python -m pip install pyyaml chevron
 ```
 
 <!-- https://github.com/AssetRipper/AssetRipper -->

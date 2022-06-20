@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="pg_sprite.css">
+    </head>
+    <body>
+        {{#orbs}}
+            <b>{{name}}({{level}})</b><br>
+            <div class='pg_sprite pg_sprite_PEG'></div>{{dmg}}|<div class='pg_sprite pg_sprite_CRIT_PEG'></div>{{cdmg}}<br>
+            {{#descs}}
+                {{{desc}}} <br>
+            {{/descs}}
+            <hr/>
+        {{/orbs}}
+    </body>
+</html>

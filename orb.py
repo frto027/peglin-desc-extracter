@@ -1,8 +1,11 @@
 # python -m pip install pyyaml
 
+import json
+import pathlib
 import re
 import yaml
 import config
+import chevron
 
 PROJECT_PATH = config.PROJECT_PATH
 
@@ -37,59 +40,69 @@ def parse_desc(desc, dict = {}):
 #orb name -> [orb desc(level1), orb desc(level2), orb desc(level3)]
 orb_data = dict()
 
-gentxt = ''
+orb_info = []
 
-for orbfile in ORBS_FOLDER.glob("*.prefab"):
-    if not '-Lv' in orbfile.name:
-        continue
-    with orbfile.open('r', encoding='utf8') as f:
-        txt = ""
-        for line in f.readlines():
-            if line.startswith('---'):
-                txt += '---\n'
-                continue
-            txt += line
+orb_infobuffer = pathlib.Path('orb_buffer.json')
+if orb_infobuffer.exists():
+    with orb_infobuffer.open('r', encoding='utf8') as f:
+        orb_info = json.loads(f.read())
+else:
+    for orbfile in ORBS_FOLDER.glob("*.prefab"):
+        if not '-Lv' in orbfile.name:
+            continue
+        with orbfile.open('r', encoding='utf8') as f:
+            txt = ""
+            for line in f.readlines():
+                if line.startswith('---'):
+                    txt += '---\n'
+                    continue
+                txt += line
+            
+            args_obj = None
+            desc_obj = None
+
+            for orb in yaml.load_all(txt, Loader=yaml.BaseLoader):
+                if "MonoBehaviour" in orb:
+                    target = orb["MonoBehaviour"]
+                    if "locNameString" in target and "locDescStrings" in target:
+                        desc_obj = target
+                    if "_Params" in target:
+                        args_obj = target
+            assert desc_obj, orbfile
+
+            args = dict()
+            if args_obj:
+                for arg in args_obj["_Params"]:
+                    args[arg["Name"]] = arg["Value"]
+
+            # -- outputs
+
+            descs = []
+            for descitem in desc_obj["locDescStrings"]:
+                descs.append({"desc":parse_desc(get_translate('Orbs/' + descitem),args)})
+
+
+            orb_info.append({
+                "name" :get_translate('Orbs/' + desc_obj["locNameString"] + '_name'),
+                "level" : desc_obj["Level"],
+                "dmg" : desc_obj["DamagePerPeg"],
+                "cdmg" : desc_obj["CritDamagePerPeg"],
+                "descs":descs,
+            })
+
+            # print(name + "(level " + level + ")" + "|" + dmg + "|" + cdmg + "|" + desc)
+
+            # gentxt += name
+            # gentxt += '(' + level + ')' + "<br/>"
+            # gentxt += "<div class='pg_sprite pg_sprite_PEG'></div>" + dmg + '|' + "<div class='pg_sprite pg_sprite_CRIT_PEG'></div>" + cdmg + "<br/>"
+            # gentxt += desc
+            # gentxt += '<hr/>'
+    with orb_infobuffer.open('w',encoding='utf8') as f:
+        f.write(json.dumps(orb_info))
         
-        args_obj = None
-        desc_obj = None
-
-        for orb in yaml.load_all(txt, Loader=yaml.BaseLoader):
-            if "MonoBehaviour" in orb:
-                target = orb["MonoBehaviour"]
-                if "locNameString" in target and "locDescStrings" in target:
-                    desc_obj = target
-                if "_Params" in target:
-                    args_obj = target
-        assert desc_obj, orbfile
-
-        args = dict()
-        if args_obj:
-            for arg in args_obj["_Params"]:
-                args[arg["Name"]] = arg["Value"]
-
-        # -- outputs
-        name = desc_obj["locNameString"]
-        name = get_translate('Orbs/' + name + '_name')
-        level = desc_obj["Level"]
-        dmg = desc_obj["DamagePerPeg"]
-        cdmg = desc_obj["CritDamagePerPeg"]
-        desc = ''
-        for descitem in desc_obj["locDescStrings"]:
-            desc += parse_desc(get_translate('Orbs/' + descitem),args)
-            desc += '<br/>'
-
-        # print(name + "(level " + level + ")" + "|" + dmg + "|" + cdmg + "|" + desc)
-
-        gentxt += name
-        gentxt += '(' + level + ')' + "<br/>"
-        gentxt += "<div class='pg_sprite pg_sprite_PEG'></div>" + dmg + '|' + "<div class='pg_sprite pg_sprite_CRIT_PEG'></div>" + cdmg + "<br/>"
-        gentxt += desc
-        gentxt += '<hr/>'
-
-
-
 with open('docs/orb.html','w',encoding='utf8') as f:
-    with open('orb.html','r',encoding='utf8') as template:
-        f.write(template.read().replace('[[[ORB_LIST]]]',gentxt))
+    with open('templates/orb.html.mustache','r',encoding='utf8') as template:
+        f.write(chevron.render(template, {"orbs":orb_info}))
+        # f.write(template.read().replace('[[[ORB_LIST]]]',gentxt))
 
 

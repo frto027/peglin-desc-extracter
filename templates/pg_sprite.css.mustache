@@ -1,0 +1,17 @@
+{{#styles}}
+.pg_style_{{name}}{color:{{color}}}
+{{/styles}}
+
+.pg_sprite{
+    image-rendering:pixelated;
+    background-image: url('atlas.png');
+    display:inline-block;
+}
+{{#glyphs}}
+.pg_sprite_{{name}}{
+    transform: scale({{scale}});
+    background-position: -{{left}}px -{{top}}px;
+    width: {{width}}px;
+    height: {{height}}px;
+}
+{{/glyphs}}
