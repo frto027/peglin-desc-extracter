@@ -387,6 +387,12 @@ for relic in relic_infos:
     relic['keywords'] = keywords
     relic['has_keywords'] = len(keywords) > 0
 
+########## get game version ########
+
+with (PROJECT_PATH / 'ProjectSettings' / 'ProjectSettings.asset').open('r', encoding='utf8') as f:
+    GAME_VERSION = yaml.load(config.purge(f), yaml.SafeLoader)['PlayerSettings']['bundleVersion']
+print('game version: ' + GAME_VERSION)
+
 
 ########## generate sprite css ##############
 
@@ -414,11 +420,11 @@ for png in used_assets:
 print('generate orb.html...')
 with open('docs/orb.html','w',encoding='utf8') as f:
     with open('templates/orb.html.mustache','r',encoding='utf8') as template:
-        f.write(chevron.render(template, {"orbs":orb_info}))
+        f.write(chevron.render(template, {"orbs":orb_info, "version":GAME_VERSION}))
 
 print('generate relic.html...')
 with open('docs/relic.html','w',encoding='utf8') as f:
     with open('templates/relic.html.mustache','r',encoding='utf8') as template:
-        f.write(chevron.render(template, {"relics":relic_infos}))
+        f.write(chevron.render(template, {"relics":relic_infos, "version":GAME_VERSION}))
 
 print('over')
