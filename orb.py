@@ -108,7 +108,7 @@ used_assets = set()
 def GenerateSpriteCss(sprite_obj):
     asset_guid = sprite_obj["guid"]
     asset_path = guid_map[asset_guid]['filename']
-    asset_file = sprite_obj['fileID']
+    asset_file = str(sprite_obj['fileID'])
 
     # read img height and width 
     (asset_h, asset_w, _) = cv2.imread(str(PROJECT_PATH / 'Assets' / 'Texture2D'/ asset_path)).shape
