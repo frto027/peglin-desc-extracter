@@ -1,0 +1,1676 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="pg_sprite.css">
+    <link rel="stylesheet" type="text/css" href="pg_orb_sprite.css">
+
+  </head>
+  <body>
+    <div class="container">
+        <h1>遗物列表</h1>
+        <hr>
+        <div class="row row-cols-auto">
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_gift_orange_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">拆不开的礼物</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有钉子拥有<span class="pg_style_durable">耐久</span>效果。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_ancient_meteorite_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">动能陨石</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 每击中次 <div class="pg_sprite pg_sprite_PEG"></div> 会触发与炸弹爆炸相同力度的反向弹力，直至板面被刷新。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_doll_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">套娃壳子</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 每次发射弹珠都附加层<span class="pg_style_multiball">分裂</span>效果，但攻击造成的<style=dmg_negative>普通伤害/暴击伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_helmet_16_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">诅咒面具</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 你当前拥有任何负面状态时，弹珠造成的<style=dmg_bonus>普通伤害+ /暴击伤害+ </span>。战斗开始时你拥有<span class="pg_style_confuse">层混乱</span>状态。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_sealed_scroll_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">封印的罪书</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有攻击造成的<style=dmg_bonus>普通伤害+ /暴击伤害+ </span>，但你可跳过弹珠的次数- 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_magnet_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">电磁铁</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 你的弹珠对 <div class="pg_sprite pg_sprite_PEG"></div> <div class="pg_sprite pg_sprite_BOMB"></div> 具有较弱磁力，对 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 具有较强磁力。该效果会维持秒，并在接下来的秒内逐渐减弱。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_bone_wand_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">骷髅魔杖</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 攻击造成的<style=dmg_bonus>伤害翻倍</span>，但每击中次 <div class="pg_sprite pg_sprite_PEG"></div> 使自身<span class="pg_style_damage">受到点伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_sapper_sack_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">工程兵背包</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有 <div class="pg_sprite pg_sprite_BOMB"></div> 都将转化为 <div class="pg_sprite pg_sprite_RIGGED_BOMB"></div> （基础伤害，<span class="pg_style_damage">自身伤害</span>）并<style=dmg_bonus>对敌人造成倍伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_buff_ring_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">荣耀戒指</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    DebugRelics<br/>
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有攻击造成的<style=dmg_negative>普通伤害/暴击伤害</span>，但每次击中的 <sprite name=PEG> 都将得到升级<style=dmg_bonus>（伤害+ ）</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_chalice_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">倾注圣杯</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有弹珠造成的<style=dmg_bonus>普通伤害+  /暴击伤害+ </span>，但板面会减少一个<div class="pg_sprite pg_sprite_REFRESH_PEG"></div>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_unpretentious_pendant_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">朴素吊坠</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有弹珠造成的<style=dmg_bonus>普通伤害+  /暴击伤害+ </span>，但板面会减少一个<div class="pg_sprite pg_sprite_CRIT_PEG"></div>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_sack_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">哈布林的挎包</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    BossRelics<br/>
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 将个随机弹珠加入你的弹珠库，然后将弹珠随机升级次。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_potion_02d_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">私酿酒</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 击中 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 会计算伤害。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_buckler_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">小圆盾</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 装填弹珠时免疫伤害。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_gunpowder_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">改良火药</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> <div class="pg_sprite pg_sprite_BOMB"></div> 被引爆时会清除附近钉子。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_candle_01b_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">短引线</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> <div class="pg_sprite pg_sprite_BOMB"></div> 只需一击就会被引爆。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_fruit_01a_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">小苹果</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 增加<span class="pg_style_heal"></span>点血量上限。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_ambidextionary_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">巧手之书</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 你可以额外跳过1颗弹珠。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_decoy_2_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">诱饵弹珠</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 在你第一次装填弹珠时，敌人不会获得额外的行动回合。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_stoneblock_01a_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">改良催化剂</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> <div class="pg_sprite pg_sprite_BOMB"></div> 造成的伤害+ 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_salt_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">盐罐</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 对史莱姆造成的<style=dmg_bonus>伤害+ </span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_food_30_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">战术棒棒糖</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 每次发射弹珠后， <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> 的位置都会改变。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_unicorn_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">独角兽角</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 你的瞄准线更长，并显示初次反弹轨迹。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_boot_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">超级靴</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 在战斗结束选择前进路线时，如果成功前进则每击中一次 <div class="pg_sprite pg_sprite_PEG"></div> <span class="pg_style_heal">恢复点血量</span>。并且弹珠掉入火坑也不会受到惩罚伤害。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_sand_arrows_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">沙箭</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 对击中的敌人施加层<span class="pg_style_blind">致盲</span>效果。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_GardenerGloves_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">园艺手套</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 对植物类敌人造成的<style=dmg_bonus>伤害+ </span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_corn_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">爆米花</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 在战斗中每击中次 <div class="pg_sprite pg_sprite_PEG"></div> <span class="pg_style_heal">恢复1点</span>血量。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_dark_mirror_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">妒嫉之灵</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 每当你<span class="pg_style_heal">治疗已损失血量</span>时，对目标敌人<span class="pg_style_damage">造成倍等量伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_grabby_hand_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">抓抓手</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 攻击空中敌人时，会横向攻击整排。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_basic_blade_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">小刀</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有攻击造成的<style=dmg_bonus>普通伤害+ 1/暴击伤害+ 0</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_sling_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">投石索</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 石头造成的<style=dmg_bonus>普通伤害+ /暴击伤害+ </span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_turtle_eye_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">龟之眼</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 弹珠和战斗奖励遗物会多一个额外选项。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_bomb_rod_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">炸弹指挥棒</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 初始板面+  <div class="pg_sprite pg_sprite_BOMB"></div> 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_well-done-steak_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">全熟牛排</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 在装填弹珠时<span class="pg_style_heal">恢复点血量</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_cheese_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">过期奶酪</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 装填弹珠时对所有敌人<span class="pg_style_damage">造成X倍点伤害</span>。（X为本场战斗装填次数） </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_fresh_bandana_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">崭新头巾</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 板面会包含1个额外的 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_special_button_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">特殊按钮</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 板面会包含1个额外的 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_refreshield_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">刷新盾</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 重装弹珠时刷新板面。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_buster_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">刷新破坏剑</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 每次刷新板面时，对目标敌人造成<span class="pg_style_damage">等同于被刷新钉子个数的伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_heart_pendant_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">耐力之心</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 战后选择回血时，根据弹珠库中的弹珠数量，每有一颗弹珠可额外恢复<span class="pg_style_heal">% </span>血量。<span class="pg_style_heal">（+ % ）</span> </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_complex_claw_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">复合爪</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 所有攻击造成的<style=dmg_bonus>普通伤害+ 0/暴击伤害+ 1</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_spiral_slayer_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">杀戮尖刺</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    DebugRelics<br/>
+                    
+                    
+
+                    <div style="margin-top:3px"> 战斗开始时你拥有层<span class="pg_style_strength">强劲</span>状态。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_bell_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">笨钟</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> Every reload grants + <span class="pg_style_strength">Muscircle</span>. </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_pocket_sand_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">一堆沙子</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 当一名敌人用近战攻击击中你时，对其施加层<span class="pg_style_blind">致盲</span>状态。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_scale-balanced_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">精明天平</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    CommonRelics<br/>
+                    
+                    
+                    
+                    
+
+                    <div style="margin-top:3px"> 每次重新装填弹珠后，你会获得层<span class="pg_style_balance">圆满</span>效果。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_hedge_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">贝齐的保险</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    DebugRelics<br/>
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 板面上每有一个 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> ，攻击造成的<style=dmg_bonus>普通伤害+ 1 /暴击伤害+ 0</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_hammer_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">超级重锤</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    DebugRelics<br/>
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> Projectile attacks have <span class="pg_style_overflow">Overflow</span>. </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_Clock_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">怀表</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 弹珠飞行时间越长，造成的伤害越高。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_necklace_plain_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">伪造项链</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 墙面的碰撞也会计算伤害。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_cookie_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">曲奇饼干</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 板面每次刷新时<span class="pg_style_heal">恢复点血量</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_book_03d_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">炼金术士手册</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> <div class="pg_sprite pg_sprite_PEG"></div> 在刷新时有% 的几率转化为 <div class="pg_sprite pg_sprite_BOMB"></div> ，但 <div class="pg_sprite pg_sprite_BOMB"></div> <style=dmg_negative>造成的伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_food_85_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">隐藏鸡腿</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 增加<span class="pg_style_heal"></span>点血量上限。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_glove_36_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">力量手套</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 攻击造成的<style=dmg_bonus>普通伤害+ 1/暴击伤害+ 1</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_lucky_penny_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">幸运硬币</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 板面会包含个额外的 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_ration_satchel_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">钉子袋</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 板面会包含个额外的 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_demon_pact_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">血之契约</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 当你的血量<span class="pg_style_damage">低于% 时</span>造成<style=dmg_bonus>倍伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_ring_050_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">无名戒指</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 石墩的碰撞也会计算伤害。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_MentalMantlel_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">心灵斗篷</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 每击中次 <sprite name="PEG> 立即对目标敌人造成1点伤害。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_RingOfReuse_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">重复戒指</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 所有弹珠+ 1层<span class="pg_style_persist">重复</span>效果。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_echo_chamber_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">回音盒</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> All attacks have <span class="pg_style_echo">Echo </span> <style=dmg_bonus></span> </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_knifesedge_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">刀锋</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 当<span class="pg_style_damage">血量低于% 时</span>，每次发射弹珠都会造成暴击。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_crit_fleece_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">暴击羊毛</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 额外击中暴击钉使伤害变为<style=dmg_bonus>倍</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_recombombulator_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">炸弹重组器</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 使用过的 <div class="pg_sprite pg_sprite_BOMB"></div> 现在可以被刷新，但 <div class="pg_sprite pg_sprite_BOMB"></div> 造成的<style=dmg_negative>伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_bombulet_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">炸弹台</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 初始板面炸弹数翻倍。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_ring_of_indignation_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">愤怒戒指</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 每当你<span class="pg_style_damage">失去血量</span>时，对所有敌人<span class="pg_style_damage">造成等同于受到伤害值倍的伤害</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_perfected_reactant_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">完美反应剂</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> <div class="pg_sprite pg_sprite_BOMB"></div> 造成的伤害+ 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_HeavyShaft_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">烈性药水</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 击中 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 也会刷新板面。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_LightShaft_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">柔性药水</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 击中 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> 也会产生暴击效果。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_refreshiv_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">刷新匕首</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 每当有一名敌人被击败时，刷新板面。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_powder_collector_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">粉尘收集器</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 每击中次 <div class="pg_sprite pg_sprite_PEG"></div> ，将其转化为 <div class="pg_sprite pg_sprite_BOMB"></div> 。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_refreshing_punch_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">潘趣酒</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 击中 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> 时会清除附近钉子。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_puppet_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">手套玩偶</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 免疫在每场战斗中将造成血量损失的首次伤害。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_oboe_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">显示错误的长笛</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 每当你将要损失血量时，减少1点本次损失血量。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_smoke_bomb_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">烟雾粉末</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> <div class="pg_sprite pg_sprite_BOMB"></div> 会在对敌人造成伤害的同时施加层<span class="pg_style_blind">致盲</span>状态。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_coin_single_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">Short Stack</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    RareRelics<br/>
+                    
+
+                    <div style="margin-top:3px"> 板面上每有一个 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> ，攻击造成的<style=dmg_negative>普通伤害- 1</span>/<style=dmg_bonus>暴击伤害+ 1</span>。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_infernalgem_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">地狱之锭</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    
+                    RareRelicsScenarioOnly<br/>
+
+                    <div style="margin-top:3px"> 每击中次 <sprite name="PEG> ，偷取选中敌人1点血量。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_poker_chip_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">加权筹码</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    
+                    RareRelicsScenarioOnly<br/>
+
+                    <div style="margin-top:3px"> 底部掉落口会使你造成的伤害倍增或倍减。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_cake_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">新鲜蛋糕</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+                    
+                    
+                    
+                    
+                    RareRelicsScenarioOnly<br/>
+
+                    <div style="margin-top:3px"> 增加<span class="pg_style_heal"></span>点血量上限。 </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                <div style="width:fit-content;margin:10px auto">
+                    <div class="pg_pic_trophy_21300000"></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">安慰奖</h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div></p>
+                </div>
+
+                    <div style="margin-top:3px"> 你感觉好些了吗？ </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
