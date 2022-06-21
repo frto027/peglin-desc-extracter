@@ -25,17 +25,15 @@
                 </div>
                 <div class="card-body">
                   <div style="text-align:center">
-                    <h5 class="card-title">{{locName}}</h5>
-                  </div>
-                  <div>
-                    {{#pool}}
-                    {{#pool.CommonRelics}}CommonRelics<br/>{{/pool.CommonRelics}}
-                    {{#pool.BossRelics}}BossRelics<br/>{{/pool.BossRelics}}
-                    {{#pool.DebugRelics}}DebugRelics<br/>{{/pool.DebugRelics}}
-                    {{#pool.RareRelics}}RareRelics<br/>{{/pool.RareRelics}}
-                    {{#pool.RareRelicsScenarioOnly}}RareRelicsScenarioOnly<br/>{{/pool.RareRelicsScenarioOnly}}
-                    {{/pool}}
-
+                    <h5 class="card-title">{{locName}}
+                      {{#pool}}
+                        {{#pool.CommonRelics}}            <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">普通池</span>               {{/pool.CommonRelics}}
+                        {{#pool.BossRelics}}              <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-success">Boss池</span>                 {{/pool.BossRelics}}
+                        {{#pool.DebugRelics}}             <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span>                {{/pool.DebugRelics}}
+                        {{#pool.RareRelics}}              <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 {{/pool.RareRelics}}
+                        {{#pool.RareRelicsScenarioOnly}}  <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-dark">剧情</span>     {{/pool.RareRelicsScenarioOnly}}
+                      {{/pool}}
+                    </h5>
                     <div style="margin-top:3px"> {{{locDesc}}} </div>
                   </div>
                 </div>

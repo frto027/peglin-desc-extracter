@@ -281,6 +281,9 @@ if not RelicInfoMap:
             if '_Params' in target:
                 for item in target['_Params']:
                     global_local_params[item['Name']] = str(item['Value'])
+
+    global_local_params['DECK_SIZE_HEAL_TOTAL'] = '0' # default value
+    
     # add unknwon relics and relic sprites
 
     for relic in FindMonoBehavioursByGuid(RelicGuid):
