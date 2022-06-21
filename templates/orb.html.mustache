@@ -33,6 +33,16 @@
                         <li class="list-group-item"> {{{desc}}} </li>
                     {{/descs}}
                     </ul>
+                    {{#has_keywords}}
+                      <div class="card-footer">
+                        {{#keywords}}
+                          {{{keyword_desc}}}
+                          {{^last?}}
+                            <hr/>
+                          {{/last?}}
+                        {{/keywords}}
+                      </div>
+                    {{/has_keywords}}
                 </div>
             </div>
             </div>
