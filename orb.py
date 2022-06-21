@@ -35,7 +35,10 @@ def get_translate(index):
 def parse_desc(desc, dict = {}):
     def rep(x):
         t = x[1]
-        return dict[t] if t in dict else "" 
+        if not t in dict:
+            print("warning: unknwon variable " + t)
+            return ""
+        return dict[t]
     desc = re.sub(r"\<style=([_a-zA-Z0-9]+)\>", r'<span class="pg_style_\1">', desc)
     desc = re.sub(r'\</style\>', '</span>', desc)
     desc = re.sub(r'\<sprite name="([_A-Za-z0-9]+)"?\>', r'<div class="pg_sprite pg_sprite_\1"></div>', desc)
@@ -275,10 +278,9 @@ if not RelicInfoMap:
             if not 'MonoBehaviour' in mono:
                 continue
             target = mono['MonoBehaviour']
-            if 'm_Script' in target and '_Params' in target['m_Script']:
-                for item in target['m_Script']['_Params']:
+            if '_Params' in target:
+                for item in target['_Params']:
                     global_local_params[item['Name']] = str(item['Value'])
-
     # add unknwon relics and relic sprites
 
     for relic in FindMonoBehavioursByGuid(RelicGuid):
