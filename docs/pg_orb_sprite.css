@@ -515,11 +515,12 @@
     transform:scale(2.0);
     margin:8.0px;
 }
-.pg_pic_sack_21300000{
+.pg_pic_haglins_satchel_21300000{
     image-rendering:pixelated;
-    background-image: url("pg_assets/sack.png");
+    background-image: url("pg_assets/haglins_satchel.png");
     width:16px;
     height:16px;
+    background-position: -0px -0.0px;
     transform:scale(2.0);
     margin:8.0px;
 }
