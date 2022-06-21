@@ -17,16 +17,17 @@
         <div class="row row-cols-auto">
         {{#relics}}
             <div class="col">
-            <div class="card" style="width: 18rem;margin:8px;">
+              <div class="card" style="width: 18rem;margin:8px;">
                 <div style="text-align:center">
-                <div style="width:fit-content;margin:10px auto">
-                    <div class="pg_pic_{{sprite}}"></div>
-                </div></div>
-                <div class="card-body">
-                <div style="text-align:center">
-                  <h5 class="card-title">{{locName}}</h5>
-                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{dmg}}&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{cdmg}}</p>
+                  <div style="width:fit-content;margin:10px auto">
+                      <div class="pg_pic_{{sprite}}"></div>
+                  </div>
                 </div>
+                <div class="card-body">
+                  <div style="text-align:center">
+                    <h5 class="card-title">{{locName}}</h5>
+                  </div>
+                  <div>
                     {{#pool}}
                     {{#pool.CommonRelics}}CommonRelics<br/>{{/pool.CommonRelics}}
                     {{#pool.BossRelics}}BossRelics<br/>{{/pool.BossRelics}}
@@ -36,8 +37,9 @@
                     {{/pool}}
 
                     <div style="margin-top:3px"> {{{locDesc}}} </div>
+                  </div>
                 </div>
-            </div>
+              </div>
             </div>
         {{/relics}}
         </div>

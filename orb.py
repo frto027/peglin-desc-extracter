@@ -36,9 +36,9 @@ def parse_desc(desc, dict = {}):
     def rep(x):
         t = x[1]
         return dict[t] if t in dict else "" 
-    desc = re.sub(r"\<style=([a-zA-Z0-9]+)\>", r'<span class="pg_style_\1">', desc)
+    desc = re.sub(r"\<style=([_a-zA-Z0-9]+)\>", r'<span class="pg_style_\1">', desc)
     desc = re.sub(r'\</style\>', '</span>', desc)
-    desc = re.sub(r'\<sprite name="([_A-Za-z0-9]+)"\>', r'<div class="pg_sprite pg_sprite_\1"></div>', desc)
+    desc = re.sub(r'\<sprite name="([_A-Za-z0-9]+)"?\>', r'<div class="pg_sprite pg_sprite_\1"></div>', desc)
     desc = re.sub(r'\{\[([a-zA-Z0-9_]+)\]\}', rep, desc)
     desc = desc.replace('\n','<br/>', -1)
     return desc
