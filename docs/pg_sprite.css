@@ -43,99 +43,99 @@
     display:inline-block;
 }
 .pg_sprite_REFRESH_PEG{
-    transform: scale(1);
-    margin: 0.0px;
+    transform: scale(2.0);
+    margin: 4.0px;
     background-position: -9px -0px;
     width: 8px;
     height: 8px;
 }
 .pg_sprite_CRIT_PEG{
-    transform: scale(1);
-    margin: 0.0px;
+    transform: scale(2.0);
+    margin: 4.0px;
     background-position: -0px -0px;
     width: 8px;
     height: 8px;
 }
 .pg_sprite_PEG{
-    transform: scale(1);
-    margin: 0.0px;
+    transform: scale(2.0);
+    margin: 4.0px;
     background-position: -18px -0px;
     width: 8px;
     height: 8px;
 }
 .pg_sprite_PEG_RESPAWNED{
-    transform: scale(1);
-    margin: 0.0px;
+    transform: scale(2.0);
+    margin: 4.0px;
     background-position: -27px -0px;
     width: 8px;
     height: 8px;
 }
 .pg_sprite_PEG_CRIT_ACTIVE{
-    transform: scale(1);
-    margin: 0.0px;
+    transform: scale(2.0);
+    margin: 4.0px;
     background-position: -36px -0px;
     width: 8px;
     height: 8px;
 }
 .pg_sprite_LONG_PEG{
-    transform: scale(0.8);
-    margin: -1.1999999999999997px;
+    transform: scale(1.6);
+    margin: 3.6000000000000005px;
     background-position: -45px -0px;
     width: 16px;
     height: 12px;
 }
 .pg_sprite_BOMB_ACTIVE_1{
-    transform: scale(1.6);
-    margin: 3.9000000000000004px;
+    transform: scale(3.2);
+    margin: 14.3px;
     background-position: -72px -0px;
     width: 8px;
     height: 13px;
 }
 .pg_sprite_BOMB_ACTIVE_2{
-    transform: scale(1.6);
-    margin: 3.6000000000000005px;
+    transform: scale(3.2);
+    margin: 13.200000000000001px;
     background-position: -83px -1px;
     width: 8px;
     height: 12px;
 }
 .pg_sprite_BOMB{
-    transform: scale(1.5);
-    margin: 3.0px;
+    transform: scale(3.0);
+    margin: 12.0px;
     background-position: -92px -0px;
     width: 8px;
     height: 12px;
 }
 .pg_sprite_PEG_CLEARED{
-    transform: scale(0.5);
-    margin: -1.0px;
+    transform: scale(1.0);
+    margin: 0.0px;
     background-position: -0px -9px;
     width: 4px;
     height: 4px;
 }
 .pg_sprite_BULLET{
-    transform: scale(0.34);
-    margin: -1.3199999999999998px;
+    transform: scale(0.68);
+    margin: -0.6399999999999999px;
     background-position: -5px -9px;
     width: 4px;
     height: 4px;
 }
 .pg_sprite_RIGGED_BOMB{
-    transform: scale(1.5);
-    margin: 2.5px;
+    transform: scale(3.0);
+    margin: 10.0px;
     background-position: -91px -13px;
     width: 9px;
     height: 10px;
 }
 .pg_sprite_DULL_PEG{
-    transform: scale(1);
-    margin: 0.0px;
+    transform: scale(2.0);
+    margin: 4.0px;
     background-position: -62px -9px;
     width: 8px;
     height: 8px;
 }
 .pg_sprite_UNPOP_PEG{
-    transform: scale(1);
-    margin: 0.0px;
+    transform: scale(2.0);
+    margin: 4.0px;
     background-position: -62px -0px;
     width: 8px;
     height: 8px;

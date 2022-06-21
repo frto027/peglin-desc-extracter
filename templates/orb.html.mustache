@@ -27,10 +27,12 @@
                   <h5 class="card-title">{{name}}({{level}})</h5>
                   <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{dmg}}&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{cdmg}}</p>
                 </div>
-
+                <hr/>
+                    <ul class="list-group list-group-flush">
                     {{#descs}}
-                        <div style="margin-top:3px"> {{{desc}}} </div>
+                        <li class="list-group-item"> {{{desc}}} </li>
                     {{/descs}}
+                    </ul>
                 </div>
             </div>
             </div>

@@ -31,8 +31,8 @@ with Sprites.open("r", encoding='utf8') as f:
     indexed_glyphs = dict()
     for g in table:
         target = dict(glyphs[g['m_GlyphIndex']])
-        target['scale'] = g['m_Scale']
-        target['margin'] = float(target['height']) * (float(target['scale']) - 1) / 2
+        target['scale'] = float(g['m_Scale']) * 2
+        target['margin'] = float(target['height']) * (target['scale'] - 1) / 2
         indexed_glyphs[g['m_Name']] = target
     # print(indexed_glyphs)
 
