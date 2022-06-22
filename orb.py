@@ -4,6 +4,7 @@ import json
 import pathlib
 import re
 from telnetlib import theNULL
+from typing import List
 from unittest import loader
 import yaml
 import config
@@ -252,6 +253,16 @@ if not orb_info:
 
     buffer_save('orb_buffer.json',orb_info)
 
+typed_orb_info_dict = dict()
+
+for orb in orb_info:
+    if not orb['name'] in typed_orb_info_dict:
+        typed_orb_info_dict[orb['name']] = {"orbs":[]}
+    typed_orb_info_dict[orb['name']]["orbs"].append(orb)
+typed_orb_info = []
+typed_orb_info = list(typed_orb_info_dict.values())
+
+
 ########## relics #########
 
 with (PROJECT_PATH / 'Assets' / 'MonoScript' / 'Assembly-CSharp' / 'Relics' / 'RelicSet.cs.meta').open('r',encoding='utf8') as f:    
@@ -442,7 +453,7 @@ for png in used_assets:
 print('generate orb.html...')
 with open('docs/orb.html','w',encoding='utf8') as f:
     with open('templates/orb.html.mustache','r',encoding='utf8') as template:
-        f.write(chevron.render(template, {"orbs":orb_info, "version":GAME_VERSION}))
+        f.write(chevron.render(template, {"orbs":orb_info, "typed_orbs": typed_orb_info, "version":GAME_VERSION}))
 
 print('generate relic.html...')
 with open('docs/relic.html','w',encoding='utf8') as f:

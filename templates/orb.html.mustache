@@ -15,10 +15,11 @@
         <h1>弹珠列表</h1><h5><a href="relic.html">遗物列表</a></h5><div class="badge bg-primary">游戏版本:{{version}}</div>
         <hr>
         
+        {{#typed_orbs}}
         <div class="row row-cols-auto">
         {{#orbs}}
-            <div class="col">
-            <div class="card" style="width: 18rem;margin:8px;">
+            <div class="col col-sm-12 col-md-4">
+            <div class="card" style="margin:8px;">
                 <div style="text-align:center">
                 <div style="width:fit-content;margin:10px auto">
                     <div class="pg_pic_{{sprite}}"></div>
@@ -70,6 +71,7 @@
             </div>
         {{/orbs}}
         </div>
+        {{/typed_orbs}}
     </div>
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
