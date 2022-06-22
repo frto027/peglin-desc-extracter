@@ -32,6 +32,27 @@ def buffer_save(path, value):
     with path.open('w',encoding='utf8') as f:
         f.write(json.dumps(value))
 
+# return pathlib(xxx.asset)
+def FindAssetByGuid(guid):
+    for meta in (PROJECT_PATH / 'Assets' / 'MonoBehaviour').glob('*.asset.meta'):
+        with meta.open('r',encoding='utf8') as f:
+            purged_file = config.purge(f)
+            if guid in purged_file:
+                return meta.parent / meta.name[:-5]
+    return None
+    
+def FindMonoBehavioursByGuid(guid):
+    ret = []
+    for asset in (PROJECT_PATH / 'Assets' / 'MonoBehaviour').glob('*.asset'):
+        with asset.open('r',encoding='utf8') as f:
+            purged_file = config.purge(f)
+            if guid in purged_file:
+                for mono in yaml.load_all(purged_file,yaml.SafeLoader):
+                    if "MonoBehaviour" in mono:
+                        if 'm_Script' in mono['MonoBehaviour'] and mono['MonoBehaviour']['m_Script']['guid'] == guid:
+                            ret.append(mono)
+    return ret
+
 term_maps = buffered('term_maps.json')
 if not term_maps:
     print('generate term_maps...')
@@ -182,13 +203,15 @@ if not orb_info:
                 for arg in args_obj["_Params"]:
                     args[arg["Name"]] = arg["Value"]
 
+            with open(orbfile.parent / (orbfile.name + '.meta'),'r',encoding='utf8') as f:
+                orb_file_guid = yaml.load(f,yaml.SafeLoader)['guid']
+
             # -- outputs
 
             descs = []
             descs_keywords = []
             for descitem in desc_obj["locDescStrings"]:
                 descs.append({"desc":parse_desc(get_translate('Orbs/' + descitem),args, descs_keywords)})
-
 
             orb_info.append({
                 "name" :get_translate('Orbs/' + desc_obj["locNameString"] + '_name'),
@@ -197,7 +220,9 @@ if not orb_info:
                 "cdmg" : desc_obj["CritDamagePerPeg"],
                 "descs":descs,
                 "sprite" : style_name,
-                "keywords" : descs_keywords
+                "keywords" : descs_keywords,
+                "guid" : orb_file_guid,
+                "pool" : {},
             })
 
 
@@ -208,6 +233,23 @@ if not orb_info:
             # gentxt += "<div class='pg_sprite pg_sprite_PEG'></div>" + dmg + '|' + "<div class='pg_sprite pg_sprite_CRIT_PEG'></div>" + cdmg + "<br/>"
             # gentxt += desc
             # gentxt += '<hr/>'
+    
+    # read orb pools
+    with open(PROJECT_PATH / 'Assets' / 'MonoScript' / 'Assembly-CSharp' / 'OrbPool.cs.meta') as f:
+        OrbPoolGUID = yaml.load(f,yaml.SafeLoader)['guid']
+    orb_guid_map = dict()
+    for mono in FindMonoBehavioursByGuid(OrbPoolGUID):
+        name = mono['MonoBehaviour']['m_Name']
+        print('orb pool name:', name)
+        for orbs in mono['MonoBehaviour']['AvailableOrbs']:
+            orb_guid = orbs['guid']
+            if not orb_guid in orb_guid_map:
+                orb_guid_map[orb_guid] = {}
+            orb_guid_map[orb_guid][name] = True
+    for orb in orb_info:
+        if orb['guid'] in orb_guid_map:
+            orb['pool'] = orb_guid_map[orb['guid']]
+
     buffer_save('orb_buffer.json',orb_info)
 
 ########## relics #########
@@ -234,26 +276,6 @@ if not RelicSets:
                         RelicSets.append(target)
     buffer_save('relic_file_sets.json', RelicSets)
 
-# return pathlib(xxx.asset)
-def FindAssetByGuid(guid):
-    for meta in (PROJECT_PATH / 'Assets' / 'MonoBehaviour').glob('*.asset.meta'):
-        with meta.open('r',encoding='utf8') as f:
-            purged_file = config.purge(f)
-            if guid in purged_file:
-                return meta.parent / meta.name[:-5]
-    return None
-    
-def FindMonoBehavioursByGuid(guid):
-    ret = []
-    for asset in (PROJECT_PATH / 'Assets' / 'MonoBehaviour').glob('*.asset'):
-        with asset.open('r',encoding='utf8') as f:
-            purged_file = config.purge(f)
-            if guid in purged_file:
-                for mono in yaml.load_all(purged_file,yaml.SafeLoader):
-                    if "MonoBehaviour" in mono:
-                        if 'm_Script' in mono['MonoBehaviour'] and mono['MonoBehaviour']['m_Script']['guid'] == guid:
-                            ret.append(mono)
-    return ret
 
 RelicInfoMap = buffered('relic_info_map.json')
 if not RelicInfoMap:

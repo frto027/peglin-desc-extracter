@@ -25,7 +25,28 @@
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
-                  <h5 class="card-title">{{name}}({{level}})</h5>
+                  <h5 class="card-title">{{name}}({{level}})
+                      {{#pool}}
+                        {{#pool.AvailableOrbs}}
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">AvailableOrbs</span>
+                        {{/pool.AvailableOrbs}}
+                        {{#pool.Brambles}}
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">Brambles</span>
+                        {{/pool.Brambles}}
+                        {{#pool.MirrorbPool}}
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">MirrorbPool</span>
+                        {{/pool.MirrorbPool}}
+                        {{#pool.OrborosPool}}
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">OrborosPool</span>
+                        {{/pool.OrborosPool}}
+                        {{#pool.PotentialLightningScenarioOrbs}}
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">PotentialLightningScenarioOrbs</span>
+                        {{/pool.PotentialLightningScenarioOrbs}}
+                        {{#pool.Stones}}
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">Stones</span>
+                         {{/pool.Stones}}
+                      {{/pool}}
+                  </h5>
                   <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{dmg}}&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>{{cdmg}}</p>
                 </div>
                 <hr/>
