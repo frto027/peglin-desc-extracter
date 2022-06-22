@@ -427,4 +427,9 @@ with open('docs/relic.html','w',encoding='utf8') as f:
     with open('templates/relic.html.mustache','r',encoding='utf8') as template:
         f.write(chevron.render(template, {"relics":relic_infos, "version":GAME_VERSION}))
 
+print('generate index.html')
+with open('docs/index.html','w',encoding='utf8') as f:
+    with open('templates/index.html.mustache','r',encoding='utf8') as template:
+        f.write(chevron.render(template,{'version':GAME_VERSION}))
+
 print('over')
