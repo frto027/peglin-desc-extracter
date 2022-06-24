@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>弹珠列表</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="pg_sprite.css">
     <link rel="stylesheet" type="text/css" href="pg_orb_sprite.css">
@@ -47,12 +48,14 @@
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">石头</span>
                          {{/pool.Stones}}
                       {{/pool}}
+                      
+                      {{#has_tutorial}}
+                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#tutorial_{{name}}_{{level}}" aria-expanded="false" aria-controls="tutorial_{{name}}_{{level}}">
+                          <span style="color:Dodgerblue" class="fa-solid fa-question"></span>
+                        </button>
+                      {{/has_tutorial}}
                   </h5>
-
                   {{#has_tutorial}}
-                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#tutorial_{{name}}_{{level}}" aria-expanded="false" aria-controls="tutorial_{{name}}_{{level}}">
-                      教程
-                    </button>
                     <div class="collapse" id="tutorial_{{name}}_{{level}}">
                       <div class="alert alert-secondary">
                         {{#tutorial}}
