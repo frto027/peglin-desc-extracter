@@ -185,6 +185,7 @@ if not orb_info:
             args_obj = None
             desc_obj = None
             sprite_obj = None
+            tutorial_obj = None
 
             for orb in yaml.load_all(config.purge(f), Loader=yaml.BaseLoader):
                 if "MonoBehaviour" in orb:
@@ -193,6 +194,8 @@ if not orb_info:
                         desc_obj = target
                     if "_Params" in target:
                         args_obj = target
+                    if "_tutorialTextLocKey" in target and not tutorial_obj:
+                        tutorial_obj = target['_tutorialTextLocKey']
                 if "SpriteRenderer" in orb and not sprite_obj:
                     sprite_obj = orb["SpriteRenderer"]
             assert desc_obj, orbfile
@@ -207,6 +210,12 @@ if not orb_info:
             with open(orbfile.parent / (orbfile.name + '.meta'),'r',encoding='utf8') as f:
                 orb_file_guid = yaml.load(f,yaml.SafeLoader)['guid']
 
+            tutorial = None
+            if tutorial_obj:
+                tutorial = []
+                for t in tutorial_obj:
+                    tutorial.append({'desc': parse_desc(get_translate('Tutorial/' + t))})
+                tutorial[-1]['last'] = True
             # -- outputs
 
             descs = []
@@ -224,6 +233,8 @@ if not orb_info:
                 "keywords" : descs_keywords,
                 "guid" : orb_file_guid,
                 "pool" : {},
+                "has_tutorial": tutorial != None,
+                "tutorial":tutorial,
             })
 
 

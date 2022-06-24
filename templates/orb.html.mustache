@@ -57,15 +57,25 @@
                     {{/descs}}
                     </ul>
                     {{#has_keywords}}
-                      <div class="card-footer">
+                        <div class="alert alert-primary">
                         {{#keywords}}
-                          {{{keyword_desc}}}
-                          {{^last?}}
-                            <hr/>
-                          {{/last?}}
+                            {{{keyword_desc}}}
+                            {{^last?}}
+                              <hr/>
+                            {{/last?}}
                         {{/keywords}}
-                      </div>
+                        </div>
                     {{/has_keywords}}
+                    {{#has_tutorial}}
+                      <div class="alert alert-secondary">
+                        {{#tutorial}}
+                          {{{desc}}}
+                          {{^last}}
+                          <hr/>
+                          {{/last}}
+                        {{/tutorial}}
+                      </div>
+                    {{/has_tutorial}}
                 </div>
             </div>
             </div>
