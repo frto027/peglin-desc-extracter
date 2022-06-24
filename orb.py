@@ -68,7 +68,8 @@ if not term_maps:
 
 def get_translate(index):
     d = term_maps[index]
-    return d[language_id] or d[0]
+    txt = d[language_id] or d[0]
+    return re.split(r"\[i2s_[a-zA-Z]+\]",txt)[0]
 
 def parse_desc(desc, dict = {}, keyword_out = None):
     def rep_var(x):
