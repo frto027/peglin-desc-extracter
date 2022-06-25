@@ -188,6 +188,8 @@ if not orb_info:
             sprite_obj = None
             tutorial_obj = None
 
+            transforms_obj = dict()
+
             for orb in yaml.load_all(config.purge(f), Loader=yaml.BaseLoader):
                 if "MonoBehaviour" in orb:
                     target = orb["MonoBehaviour"]
@@ -199,8 +201,15 @@ if not orb_info:
                         tutorial_obj = target['_tutorialTextLocKey']
                 if "SpriteRenderer" in orb and not sprite_obj:
                     sprite_obj = orb["SpriteRenderer"]
+                if "Transform" in orb:
+                    transforms_obj[orb["Transform"]["m_GameObject"]["fileID"]] = orb["Transform"]
+
             assert desc_obj, orbfile
             assert sprite_obj, orbfile
+            assert sprite_obj["m_GameObject"]["fileID"] in transforms_obj
+
+            localScale = transforms_obj[sprite_obj["m_GameObject"]["fileID"]]['m_LocalScale']
+
             style_name =GenerateSpriteCss(sprite_obj['m_Sprite'])            
 
             args = dict()
@@ -236,6 +245,8 @@ if not orb_info:
                 "pool" : {},
                 "has_tutorial": tutorial != None,
                 "tutorial":tutorial,
+                "scaleX":localScale['x'],
+                "scaleY":localScale['y'],
             })
 
 
