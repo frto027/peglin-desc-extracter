@@ -3,8 +3,8 @@
     background-image: url("pg_assets/all_orb_nothing_active.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_blind_orb_21300008{
     image-rendering:pixelated;
@@ -12,16 +12,16 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_bomb_forge_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/bomb_forge.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_boulder_21300000{
     image-rendering:pixelated;
@@ -29,8 +29,8 @@
     width:23.946499px;
     height:22.946499px;
     background-position: -4.026751px -5.02675px;
-    transform:scale(1.3945482489507441);
-    margin:4.5267505px;
+    transform:scale(2.266140904544959);
+    margin:14.5267505px;
 }
 .pg_pic_brambleball_animation_16x16_spikes_21300006{
     image-rendering:pixelated;
@@ -38,8 +38,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_Buff_orb_21300000{
     image-rendering:pixelated;
@@ -47,16 +47,16 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_Concentrication_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/Concentrication.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_crit_orb_21300006{
     image-rendering:pixelated;
@@ -64,8 +64,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_daggorb_21300002{
     image-rendering:pixelated;
@@ -73,8 +73,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_Debuff_orb_21300000{
     image-rendering:pixelated;
@@ -82,8 +82,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_heal_21300006{
     image-rendering:pixelated;
@@ -91,8 +91,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_echorb_21300004{
     image-rendering:pixelated;
@@ -100,8 +100,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_egg_21300002{
     image-rendering:pixelated;
@@ -109,16 +109,16 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_extra_orbinary_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/extra_orbinary.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_FB500-1_21300000{
     image-rendering:pixelated;
@@ -126,16 +126,16 @@
     width:307.84778px;
     height:307.84778px;
     background-position: -94.07612px -94.0761px;
-    transform:scale(0.10394747689913503);
-    margin:-137.92389px;
+    transform:scale(0.1689146499610944);
+    margin:-127.92389px;
 }
 .pg_pic_ghost_orb_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/ghost_orb.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_iceball_animation_16x16_21300000{
     image-rendering:pixelated;
@@ -143,8 +143,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_thunderball_animation_16x16_21300004{
     image-rendering:pixelated;
@@ -152,48 +152,48 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_matryorbska_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/matryorbska.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_memorb_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/memorb.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_mirrorb_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/mirrorb.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_morbidorb_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/morbidorb.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_necorbmancer_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/necorbmancer.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_ohmygorb_21300006{
     image-rendering:pixelated;
@@ -201,8 +201,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_orbelisk_21300018{
     image-rendering:pixelated;
@@ -210,8 +210,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_orboros_21300000{
     image-rendering:pixelated;
@@ -219,8 +219,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_orbsium_21300004{
     image-rendering:pixelated;
@@ -228,16 +228,16 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_material_23_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/material_23.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_refresh_orb_21300000{
     image-rendering:pixelated;
@@ -245,16 +245,16 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_bouncyball_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/bouncyball.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_shuffle_orb_21300002{
     image-rendering:pixelated;
@@ -262,8 +262,8 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_sphear_21300004{
     image-rendering:pixelated;
@@ -271,24 +271,24 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_bouncyball_slime_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/bouncyball_slime.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_rock_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/rock.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_sworb_21300016{
     image-rendering:pixelated;
@@ -296,224 +296,224 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_ambidextionary_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/ambidextionary.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_book_03d_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/book_03d.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_fruit_01a_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/fruit_01a.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_basic_blade_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/basic_blade.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_hedge_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/hedge.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_bomb_rod_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/bomb_rod.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_bombulet_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/bombulet.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_buckler_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/buckler.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_cake_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/cake.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_cheese_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/cheese.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_complex_claw_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/complex_claw.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_trophy_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/trophy.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_chalice_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/chalice.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_cookie_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/cookie.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_crit_fleece_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/crit_fleece.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_HeavyShaft_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/HeavyShaft.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_helmet_16_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/helmet_16.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_decoy_2_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/decoy_2.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_bell_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/bell.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_echo_chamber_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/echo_chamber.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_gunpowder_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/gunpowder.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_turtle_eye_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/turtle_eye.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_fresh_bandana_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/fresh_bandana.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_GardenerGloves_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/GardenerGloves.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_gift_orange_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/gift_orange.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_buff_ring_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/buff_ring.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_grabby_hand_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/grabby_hand.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_haglins_satchel_21300000{
     image-rendering:pixelated;
@@ -521,128 +521,128 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_heart_pendant_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/heart_pendant.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_stoneblock_01a_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/stoneblock_01a.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_infernalgem_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/infernalgem.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_oboe_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/oboe.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_ancient_meteorite_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/ancient_meteorite.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_knifesedge_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/knifesedge.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_lucky_penny_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/lucky_penny.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_magnet_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/magnet.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_doll_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/doll.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_MentalMantlel_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/MentalMantlel.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_demon_pact_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/demon_pact.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_hammer_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/hammer.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_ration_satchel_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/ration_satchel.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_perfected_reactant_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/perfected_reactant.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_pocket_sand_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/pocket_sand.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_Clock_21300000{
     image-rendering:pixelated;
@@ -650,286 +650,286 @@
     width:16px;
     height:16px;
     background-position: -0px -0.0px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_corn_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/corn.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_potion_02d_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/potion_02d.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_powder_collector_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/powder_collector.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_glove_36_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/glove_36.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_puppet_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/puppet.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_recombombulator_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/recombombulator.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_buster_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/buster.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_refreshield_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/refreshield.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_refreshing_punch_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/refreshing_punch.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_refreshiv_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/refreshiv.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_food_30_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/food_30.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_LightShaft_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/LightShaft.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_ring_of_indignation_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/ring_of_indignation.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_RingOfReuse_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/RingOfReuse.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_salt_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/salt.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_sand_arrows_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/sand_arrows.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_sapper_sack_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/sapper_sack.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_sealed_scroll_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/sealed_scroll.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_candle_01b_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/candle_01b.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_coin_single_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/coin_single.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_scale-balanced_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/scale-balanced.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_bone_wand_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/bone_wand.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_sling_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/sling.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_smoke_bomb_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/smoke_bomb.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_special_button_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/special_button.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_ring_050_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/ring_050.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_spiral_slayer_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/spiral_slayer.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_necklace_plain_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/necklace_plain.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_boot_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/boot.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_unicorn_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/unicorn.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_unpretentious_pendant_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/unpretentious_pendant.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_food_85_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/food_85.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_dark_mirror_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/dark_mirror.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_poker_chip_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/poker_chip.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }
 .pg_pic_well-done-steak_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/well-done-steak.png");
     width:16px;
     height:16px;
-    transform:scale(2.0);
-    margin:8.0px;
+    transform:scale(3.25);
+    margin:18.0px;
 }

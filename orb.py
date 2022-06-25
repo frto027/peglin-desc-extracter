@@ -17,7 +17,7 @@ I2Language = PROJECT_PATH / 'Assets' / 'Resources' / 'I2Languages.asset'
 
 ORBS_FOLDER = PROJECT_PATH / 'Assets' / 'Resources'/ 'prefabs' / 'orbs'
 
-orb_sprite_height_limit = 32
+orb_sprite_height_limit = 26 * 2
 language_id = 8
 
 def buffered(path, default = None):
