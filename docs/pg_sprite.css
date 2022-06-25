@@ -41,6 +41,7 @@
     image-rendering:pixelated;
     background-image: url('atlas.png');
     display:inline-block;
+    vertical-align: middle;
 }
 .pg_sprite_REFRESH_PEG{
     transform: scale(2.0);
