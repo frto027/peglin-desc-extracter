@@ -14,7 +14,7 @@
 .pg_style_blind{color:#59307d}
 .pg_style_confuse{color:#c8640e}
 .pg_style_water{color:#51d5dd}
-.pg_style_durable{color:#e87b22}
+.pg_style_durable{color:#cc611f}
 .pg_style_persist{color:#007e3c}
 .pg_style_dmg_bonus{color:#006A00}
 .pg_style_dmg_negative{color:#840000}
@@ -29,9 +29,9 @@
 .pg_style_balance{color:#1d00d1}
 .pg_style_dexterity{color:#2692a6}
 .pg_style_shield{color:#0086ff}
-.pg_style_hit{color:#180057}
-.pg_style_activate{color:#180057}
-.pg_style_pop{color:#180057}
+.pg_style_hit{color:#cc611f}
+.pg_style_activate{color:#cc611f}
+.pg_style_pop{color:#cc611f}
 .pg_style_destroy{color:#B30900}
 .pg_style_pierce{color:#91d0e4}
 .pg_style_heal2{color:#006A00}

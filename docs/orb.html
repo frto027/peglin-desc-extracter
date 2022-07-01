@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-        <h1>弹珠列表</h1><h5><a href="relic.html">遗物列表</a></h5><div class="badge bg-primary">游戏版本:0.7.28</div>
+        <h1>弹珠列表</h1><h5><a href="relic.html">遗物列表</a></h5><div class="badge bg-primary">游戏版本:0.7.34</div>
         <hr>
         
         <div class="row row-cols-auto">
@@ -110,7 +110,7 @@
                         <li class="list-group-item"> 对被击中的敌人施加5层<span class="pg_style_blind">致盲</span>效果 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10+X）% 的几率落空。
+                            当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10 + X）% 的几率落空。
                         </div>
                    
                 </div>
@@ -135,7 +135,7 @@
                         <li class="list-group-item"> 对被击中的敌人施加10层<span class="pg_style_blind">致盲</span>效果 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10+X）% 的几率落空。
+                            当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10 + X）% 的几率落空。
                         </div>
                    
                 </div>
@@ -160,7 +160,7 @@
                         <li class="list-group-item"> 对被击中的敌人施加15层<span class="pg_style_blind">致盲</span>效果 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10+X）% 的几率落空。
+                            当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10 + X）% 的几率落空。
                         </div>
                    
                 </div>
@@ -188,7 +188,7 @@
                         <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>8次 <div class="pg_sprite pg_sprite_PEG"></div> ，将该次<span class="pg_style_hit">击中</span>的 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_BOMB"></div> </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -214,7 +214,7 @@
                         <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>8次 <div class="pg_sprite pg_sprite_PEG"></div> ，将该次<span class="pg_style_hit">击中</span>的 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_BOMB"></div> </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -240,7 +240,7 @@
                         <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>6次 <div class="pg_sprite pg_sprite_PEG"></div> ，将该次<span class="pg_style_hit">击中</span>的 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_BOMB"></div> </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -433,10 +433,12 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 对被击中的敌人施加3层<span class="pg_style_bramble">荆棘</span>效果 </li>
                         <li class="list-group-item"> 穿过处于<span class="pg_style_bramble">荆棘</span>状态的敌人，每层荆棘效果会造成10点伤害 </li>
-                        <li class="list-group-item"> 伤害溢出（溢出的伤害传递至下一个敌人） </li>
+                        <li class="list-group-item"> <span class="pg_style_overflow">伤害溢出</span> </li>
                     </ul>
                         <div class="alert alert-primary">
                             当敌人处于<span class="pg_style_bramble">荆棘</span>状态时，他将无法移动，并且穿过他的敌人会受到伤害。
+                              <hr/>
+                            当弹珠拥有<span class="pg_style_overflow">伤害溢出</span>效果时，会将溢出的伤害传递至下一个敌人。
                         </div>
                    
                 </div>
@@ -518,7 +520,7 @@
                 <div style="text-align:center">
                 <div style="width:76px; height:84px;margin:25px auto 0px auto;position:relative;">
                     <div style="background:url(SmallBrownBox.png);width:38px;height:42px;margin:19px 21px;position:absolute;transform:scale(2);image-rendering:pixelated;"></div>
-                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(1) scaleY(1)"><div class="pg_pic_Concentrication_21300000"></div></div>
+                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(0.6) scaleY(0.6)"><div class="pg_pic_Concentrication_21300000"></div></div>
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
@@ -534,7 +536,7 @@
                         <li class="list-group-item"> 可以瞄准任意敌人 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -545,7 +547,7 @@
                 <div style="text-align:center">
                 <div style="width:76px; height:84px;margin:25px auto 0px auto;position:relative;">
                     <div style="background:url(SmallBrownBox.png);width:38px;height:42px;margin:19px 21px;position:absolute;transform:scale(2);image-rendering:pixelated;"></div>
-                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(1) scaleY(1)"><div class="pg_pic_Concentrication_21300000"></div></div>
+                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(0.6) scaleY(0.6)"><div class="pg_pic_Concentrication_21300000"></div></div>
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
@@ -560,7 +562,7 @@
                         <li class="list-group-item"> 可以瞄准任意敌人 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -571,7 +573,7 @@
                 <div style="text-align:center">
                 <div style="width:76px; height:84px;margin:25px auto 0px auto;position:relative;">
                     <div style="background:url(SmallBrownBox.png);width:38px;height:42px;margin:19px 21px;position:absolute;transform:scale(2);image-rendering:pixelated;"></div>
-                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(1) scaleY(1)"><div class="pg_pic_Concentrication_21300000"></div></div>
+                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(0.6) scaleY(0.6)"><div class="pg_pic_Concentrication_21300000"></div></div>
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
@@ -586,7 +588,7 @@
                         <li class="list-group-item"> 可以瞄准任意敌人 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -607,15 +609,15 @@
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">拾取池</span>
                       
                   </h5>
-                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>1&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>1</p>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>0&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>4</p>
                 </div>
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>8次 <div class="pg_sprite pg_sprite_PEG"></div> ，将该次<span class="pg_style_hit">击中</span>的 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> </li>
-                        <li class="list-group-item"> This orb treats <div class="pg_sprite pg_sprite_CRIT_PEG"></div> as <span class="pg_style_durable">Durable</span> </li>
+                        <li class="list-group-item"> 该弹珠会将 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 视为拥有<span class="pg_style_durable">耐久</span>效果 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                               <hr/>
                             当钉子拥有<span class="pg_style_durable">耐久</span>效果时，它在一次射击中能承受3次击中。
                         </div>
@@ -635,16 +637,16 @@
                   <h5 class="card-title">暴击弹珠(2)
                       
                   </h5>
-                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>1&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>2</p>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>0&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>5</p>
                 </div>
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>8次 <div class="pg_sprite pg_sprite_PEG"></div> ，将该次<span class="pg_style_hit">击中</span>的 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> </li>
                         <li class="list-group-item"> 将<span class="pg_style_hit">击中</span>的第一个 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> </li>
-                        <li class="list-group-item"> This orb treats <div class="pg_sprite pg_sprite_CRIT_PEG"></div> as <span class="pg_style_durable">Durable</span> </li>
+                        <li class="list-group-item"> 该弹珠会将 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 视为拥有<span class="pg_style_durable">耐久</span>效果 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                               <hr/>
                             当钉子拥有<span class="pg_style_durable">耐久</span>效果时，它在一次射击中能承受3次击中。
                         </div>
@@ -664,16 +666,16 @@
                   <h5 class="card-title">暴击弹珠(3)
                       
                   </h5>
-                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>1&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>3</p>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>0&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>6</p>
                 </div>
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>6次 <div class="pg_sprite pg_sprite_PEG"></div> ，将该次<span class="pg_style_hit">击中</span>的 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> </li>
                         <li class="list-group-item"> 将<span class="pg_style_hit">击中</span>的第一个 <div class="pg_sprite pg_sprite_PEG"></div> 转化为 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> </li>
-                        <li class="list-group-item"> This orb treats <div class="pg_sprite pg_sprite_CRIT_PEG"></div> as <span class="pg_style_durable">Durable</span> </li>
+                        <li class="list-group-item"> 该弹珠会将 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 视为拥有<span class="pg_style_durable">耐久</span>效果 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                               <hr/>
                             当钉子拥有<span class="pg_style_durable">耐久</span>效果时，它在一次射击中能承受3次击中。
                         </div>
@@ -803,10 +805,10 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 降级每个被击中的 <div class="pg_sprite pg_sprite_PEG"></div> <span class="pg_style_dmg_negative">（伤害-1）</span> </li>
-                        <li class="list-group-item"> <span class="pg_style_overflow">Overflow</span> </li>
+                        <li class="list-group-item"> <span class="pg_style_overflow">伤害溢出</span> </li>
                     </ul>
                         <div class="alert alert-primary">
-                            <span class="pg_style_overflow">Overflow</span> causes excess damage to carry over to the next enemy.
+                            当弹珠拥有<span class="pg_style_overflow">伤害溢出</span>效果时，会将溢出的伤害传递至下一个敌人。
                         </div>
                    
                 </div>
@@ -829,10 +831,10 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 降级每个被击中的 <div class="pg_sprite pg_sprite_PEG"></div> <span class="pg_style_dmg_negative">（伤害-2）</span> </li>
-                        <li class="list-group-item"> <span class="pg_style_overflow">Overflow</span> </li>
+                        <li class="list-group-item"> <span class="pg_style_overflow">伤害溢出</span> </li>
                     </ul>
                         <div class="alert alert-primary">
-                            <span class="pg_style_overflow">Overflow</span> causes excess damage to carry over to the next enemy.
+                            当弹珠拥有<span class="pg_style_overflow">伤害溢出</span>效果时，会将溢出的伤害传递至下一个敌人。
                         </div>
                    
                 </div>
@@ -855,10 +857,10 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 降级每个被击中的 <div class="pg_sprite pg_sprite_PEG"></div> <span class="pg_style_dmg_negative">（伤害-2）</span> </li>
-                        <li class="list-group-item"> <span class="pg_style_overflow">Overflow</span> </li>
+                        <li class="list-group-item"> <span class="pg_style_overflow">伤害溢出</span> </li>
                     </ul>
                         <div class="alert alert-primary">
-                            <span class="pg_style_overflow">Overflow</span> causes excess damage to carry over to the next enemy.
+                            当弹珠拥有<span class="pg_style_overflow">伤害溢出</span>效果时，会将溢出的伤害传递至下一个敌人。
                         </div>
                    
                 </div>
@@ -987,10 +989,10 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 攻击所有敌人 </li>
-                        <li class="list-group-item"> <span class="pg_style_echo">Echo 15</span>  </li>
+                        <li class="list-group-item"> <span class="pg_style_echo">回声 15</span>  </li>
                     </ul>
                         <div class="alert alert-primary">
-                            <span class="pg_style_echo">Echo X</span> deals X% of the previous attack damage as bonus damage
+                            当弹珠拥有<span class="pg_style_echo">回声 X</span>效果时，会以上一次攻击伤害的X% 作为附加伤害。
                         </div>
                    
                 </div>
@@ -1013,10 +1015,10 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 攻击所有敌人 </li>
-                        <li class="list-group-item"> <span class="pg_style_echo">Echo 30</span>  </li>
+                        <li class="list-group-item"> <span class="pg_style_echo">回声 30</span>  </li>
                     </ul>
                         <div class="alert alert-primary">
-                            <span class="pg_style_echo">Echo X</span> deals X% of the previous attack damage as bonus damage
+                            当弹珠拥有<span class="pg_style_echo">回声 X</span>效果时，会以上一次攻击伤害的X% 作为附加伤害。
                         </div>
                    
                 </div>
@@ -1039,10 +1041,10 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 攻击所有敌人 </li>
-                        <li class="list-group-item"> <span class="pg_style_echo">Echo 50</span>  </li>
+                        <li class="list-group-item"> <span class="pg_style_echo">回声 50</span>  </li>
                     </ul>
                         <div class="alert alert-primary">
-                            <span class="pg_style_echo">Echo X</span> deals X% of the previous attack damage as bonus damage
+                            当弹珠拥有<span class="pg_style_echo">回声 X</span>效果时，会以上一次攻击伤害的X% 作为附加伤害。
                         </div>
                    
                 </div>
@@ -1402,6 +1404,78 @@
                 <div style="text-align:center">
                 <div style="width:76px; height:84px;margin:25px auto 0px auto;position:relative;">
                     <div style="background:url(SmallBrownBox.png);width:38px;height:42px;margin:19px 21px;position:absolute;transform:scale(2);image-rendering:pixelated;"></div>
+                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(0.6) scaleY(0.6)"><div class="pg_pic_jack-orb-lantern_21300000"></div></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">Jack-Orb-Lantern(1)
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">拾取池</span>
+                      
+                  </h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>1&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>2</p>
+                </div>
+                <hr/>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> Instead of exiting the pegboard, this orb will return to the top of the pegboard 1 times. </li>
+                        <li class="list-group-item"> 可以瞄准任意敌人 </li>
+                    </ul>
+                   
+                </div>
+            </div>
+            </div>
+            <div class="col col-sm-12 col-md-4">
+            <div class="card" style="margin:8px;">
+                <div style="text-align:center">
+                <div style="width:76px; height:84px;margin:25px auto 0px auto;position:relative;">
+                    <div style="background:url(SmallBrownBox.png);width:38px;height:42px;margin:19px 21px;position:absolute;transform:scale(2);image-rendering:pixelated;"></div>
+                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(0.6) scaleY(0.6)"><div class="pg_pic_jack-orb-lantern_21300000"></div></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">Jack-Orb-Lantern(2)
+                      
+                  </h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>2&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>4</p>
+                </div>
+                <hr/>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> Instead of exiting the pegboard, this orb will return to the top of the pegboard 2 times. </li>
+                        <li class="list-group-item"> 可以瞄准任意敌人 </li>
+                    </ul>
+                   
+                </div>
+            </div>
+            </div>
+            <div class="col col-sm-12 col-md-4">
+            <div class="card" style="margin:8px;">
+                <div style="text-align:center">
+                <div style="width:76px; height:84px;margin:25px auto 0px auto;position:relative;">
+                    <div style="background:url(SmallBrownBox.png);width:38px;height:42px;margin:19px 21px;position:absolute;transform:scale(2);image-rendering:pixelated;"></div>
+                    <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(0.6) scaleY(0.6)"><div class="pg_pic_jack-orb-lantern_21300000"></div></div>
+                </div></div>
+                <div class="card-body">
+                <div style="text-align:center">
+                  <h5 class="card-title">Jack-Orb-Lantern(3)
+                      
+                  </h5>
+                  <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>3&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>6</p>
+                </div>
+                <hr/>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> Instead of exiting the pegboard, this orb will return to the top of the pegboard 3 times. </li>
+                        <li class="list-group-item"> 可以瞄准任意敌人 </li>
+                    </ul>
+                   
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row row-cols-auto">
+            <div class="col col-sm-12 col-md-4">
+            <div class="card" style="margin:8px;">
+                <div style="text-align:center">
+                <div style="width:76px; height:84px;margin:25px auto 0px auto;position:relative;">
+                    <div style="background:url(SmallBrownBox.png);width:38px;height:42px;margin:19px 21px;position:absolute;transform:scale(2);image-rendering:pixelated;"></div>
                     <div style="position:absolute;left:13px;top:13px;image-rendering:pixelated;transform:scaleX(1) scaleY(1)"><div class="pg_pic_thunderball_animation_16x16_21300004"></div></div>
                 </div></div>
                 <div class="card-body">
@@ -1743,7 +1817,7 @@
                         <li class="list-group-item"> 穿透 <div class="pg_sprite pg_sprite_PEG_CLEARED"></div> 时<span class="pg_style_activate">触发</span>它们 </li>
                     </ul>
                         <div class="alert alert-primary">
-                             <div class="pg_sprite pg_sprite_PEG"></div>可被<span class="pg_style_activate">触发</span>，你可以使用弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）来击中它们。
+                             <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -1768,7 +1842,7 @@
                         <li class="list-group-item"> 穿透 <div class="pg_sprite pg_sprite_PEG_CLEARED"></div> 时<span class="pg_style_activate">触发</span>它们 </li>
                     </ul>
                         <div class="alert alert-primary">
-                             <div class="pg_sprite pg_sprite_PEG"></div>可被<span class="pg_style_activate">触发</span>，你可以使用弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）来击中它们。
+                             <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -1793,7 +1867,7 @@
                         <li class="list-group-item"> 穿透 <div class="pg_sprite pg_sprite_PEG_CLEARED"></div> 时<span class="pg_style_activate">触发</span>它们 </li>
                     </ul>
                         <div class="alert alert-primary">
-                             <div class="pg_sprite pg_sprite_PEG"></div>可被<span class="pg_style_activate">触发</span>，你可以使用弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）来击中它们。
+                             <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -1897,9 +1971,9 @@
                         <li class="list-group-item"> 攻击所有敌人 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当<div class="pg_sprite pg_sprite_PEG"></div>被摧毁时，它们会从板面上被永久移除。
+                            当 <div class="pg_sprite pg_sprite_PEG"></div> 被摧毁时，它们会从板面上被永久移除。
                               <hr/>
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -1925,9 +1999,9 @@
                         <li class="list-group-item"> 攻击所有敌人 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当<div class="pg_sprite pg_sprite_PEG"></div>被摧毁时，它们会从板面上被永久移除。
+                            当 <div class="pg_sprite pg_sprite_PEG"></div> 被摧毁时，它们会从板面上被永久移除。
                               <hr/>
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -1953,9 +2027,9 @@
                         <li class="list-group-item"> 攻击所有敌人 </li>
                     </ul>
                         <div class="alert alert-primary">
-                            当<div class="pg_sprite pg_sprite_PEG"></div>被摧毁时，它们会从板面上被永久移除。
+                            当 <div class="pg_sprite pg_sprite_PEG"></div> 被摧毁时，它们会从板面上被永久移除。
                               <hr/>
-                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。除非出现特殊情况，否则<div class="pg_sprite pg_sprite_PEG"></div>会在被弹珠<span class="pg_style_hit">击中</span>时<span class="pg_style_activate">触发</span>。
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
                         </div>
                    
                 </div>
@@ -2056,13 +2130,13 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> <span class="pg_style_persist">重复3次</span> </li>
-                        <li class="list-group-item"> <span class="pg_style_echo">Echo 50</span>  </li>
-                        <li class="list-group-item"> <span class="pg_style_damage">Deals 4 damage to self</span> when discarded </li>
+                        <li class="list-group-item"> <span class="pg_style_echo">回声 50</span>  </li>
+                        <li class="list-group-item"> 当这颗弹珠被跳过时，<span class="pg_style_damage">对自身造成4点伤害</span> </li>
                     </ul>
                         <div class="alert alert-primary">
                             当弹珠拥有<span class="pg_style_persist">重复 X</span>效果时，它能够在轮到下一颗弹珠前被发射X次。跳过这颗弹珠会跳过所有剩余的的重复效果次数。
                               <hr/>
-                            <span class="pg_style_echo">Echo X</span> deals X% of the previous attack damage as bonus damage
+                            当弹珠拥有<span class="pg_style_echo">回声 X</span>效果时，会以上一次攻击伤害的X% 作为附加伤害。
                         </div>
                    
                 </div>
@@ -2085,13 +2159,13 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> <span class="pg_style_persist">重复4次</span> </li>
-                        <li class="list-group-item"> <span class="pg_style_echo">Echo 50</span>  </li>
-                        <li class="list-group-item"> <span class="pg_style_damage">Deals 4 damage to self</span> when discarded </li>
+                        <li class="list-group-item"> <span class="pg_style_echo">回声 50</span>  </li>
+                        <li class="list-group-item"> 当这颗弹珠被跳过时，<span class="pg_style_damage">对自身造成4点伤害</span> </li>
                     </ul>
                         <div class="alert alert-primary">
                             当弹珠拥有<span class="pg_style_persist">重复 X</span>效果时，它能够在轮到下一颗弹珠前被发射X次。跳过这颗弹珠会跳过所有剩余的的重复效果次数。
                               <hr/>
-                            <span class="pg_style_echo">Echo X</span> deals X% of the previous attack damage as bonus damage
+                            当弹珠拥有<span class="pg_style_echo">回声 X</span>效果时，会以上一次攻击伤害的X% 作为附加伤害。
                         </div>
                    
                 </div>
@@ -2114,13 +2188,13 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> <span class="pg_style_persist">重复5次</span> </li>
-                        <li class="list-group-item"> <span class="pg_style_echo">Echo 50</span>  </li>
-                        <li class="list-group-item"> <span class="pg_style_damage">Deals 4 damage to self</span> when discarded </li>
+                        <li class="list-group-item"> <span class="pg_style_echo">回声 50</span>  </li>
+                        <li class="list-group-item"> 当这颗弹珠被跳过时，<span class="pg_style_damage">对自身造成4点伤害</span> </li>
                     </ul>
                         <div class="alert alert-primary">
                             当弹珠拥有<span class="pg_style_persist">重复 X</span>效果时，它能够在轮到下一颗弹珠前被发射X次。跳过这颗弹珠会跳过所有剩余的的重复效果次数。
                               <hr/>
-                            <span class="pg_style_echo">Echo X</span> deals X% of the previous attack damage as bonus damage
+                            当弹珠拥有<span class="pg_style_echo">回声 X</span>效果时，会以上一次攻击伤害的X% 作为附加伤害。
                         </div>
                    
                 </div>
@@ -2146,9 +2220,12 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 很重 </li>
-                        <li class="list-group-item"> 每次击中钉子会计算2次伤害 </li>
+                        <li class="list-group-item"> 每次<span class="pg_style_activate">触发</span>钉子会计算2次伤害 </li>
                         <li class="list-group-item"> 可以瞄准任意敌人 </li>
                     </ul>
+                        <div class="alert alert-primary">
+                             <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                        </div>
                    
                 </div>
             </div>
@@ -2170,9 +2247,12 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 非常重 </li>
-                        <li class="list-group-item"> 每次击中钉子会计算3次伤害 </li>
+                        <li class="list-group-item"> 每次<span class="pg_style_activate">触发</span>钉子会计算3次伤害 </li>
                         <li class="list-group-item"> 可以瞄准任意敌人 </li>
                     </ul>
+                        <div class="alert alert-primary">
+                             <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                        </div>
                    
                 </div>
             </div>
@@ -2194,9 +2274,12 @@
                 <hr/>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 超级重 </li>
-                        <li class="list-group-item"> 每次击中钉子会计算4次伤害 </li>
+                        <li class="list-group-item"> 每次<span class="pg_style_activate">触发</span>钉子会计算4次伤害 </li>
                         <li class="list-group-item"> 可以瞄准任意敌人 </li>
                     </ul>
+                        <div class="alert alert-primary">
+                             <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                        </div>
                    
                 </div>
             </div>
@@ -2385,9 +2468,12 @@
                 </div>
                 <hr/>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> 每击中5次 <div class="pg_sprite pg_sprite_PEG"></div> ，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
+                        <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>5次 <div class="pg_sprite pg_sprite_PEG"></div> ，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
                         <li class="list-group-item"> 当这颗弹珠被跳过时，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
                     </ul>
+                        <div class="alert alert-primary">
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
+                        </div>
                    
                 </div>
             </div>
@@ -2408,9 +2494,12 @@
                 </div>
                 <hr/>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> 每击中4次 <div class="pg_sprite pg_sprite_PEG"></div> ，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
+                        <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>4次 <div class="pg_sprite pg_sprite_PEG"></div> ，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
                         <li class="list-group-item"> 当这颗弹珠被跳过时，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
                     </ul>
+                        <div class="alert alert-primary">
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
+                        </div>
                    
                 </div>
             </div>
@@ -2431,9 +2520,12 @@
                 </div>
                 <hr/>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> 每击中3次 <div class="pg_sprite pg_sprite_PEG"></div> ，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
+                        <li class="list-group-item"> 每<span class="pg_style_hit">击中</span>3次 <div class="pg_sprite pg_sprite_PEG"></div> ，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
                         <li class="list-group-item"> 当这颗弹珠被跳过时，重新刷新 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 和 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> </li>
                     </ul>
+                        <div class="alert alert-primary">
+                            当弹珠物理接触到板面上的物体时，意味着后者被<span class="pg_style_hit">击中</span>了。若无特殊情况，<span class="pg_style_hit">击中</span> <div class="pg_sprite pg_sprite_PEG"></div> 即代表其被<span class="pg_style_activate">触发</span>。
+                        </div>
                    
                 </div>
             </div>
@@ -2449,7 +2541,7 @@
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
-                  <h5 class="card-title">Sphear(1)
+                  <h5 class="card-title">长枪弹珠(1)
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">拾取池</span>
                       
                   </h5>
@@ -2472,7 +2564,7 @@
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
-                  <h5 class="card-title">Sphear(2)
+                  <h5 class="card-title">长枪弹珠(2)
                       
                   </h5>
                   <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>3&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>5</p>
@@ -2494,7 +2586,7 @@
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
-                  <h5 class="card-title">Sphear(3)
+                  <h5 class="card-title">长枪弹珠(3)
                       
                   </h5>
                   <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>4&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>6</p>
@@ -2671,7 +2763,7 @@
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
-                  <h5 class="card-title">Sworb(1)
+                  <h5 class="card-title">利剑弹珠(1)
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">拾取池</span>
                       
                   </h5>
@@ -2694,7 +2786,7 @@
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
-                  <h5 class="card-title">Sworb(2)
+                  <h5 class="card-title">利剑弹珠(2)
                       
                   </h5>
                   <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>4&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>7</p>
@@ -2716,7 +2808,7 @@
                 </div></div>
                 <div class="card-body">
                 <div style="text-align:center">
-                  <h5 class="card-title">Sworb(3)
+                  <h5 class="card-title">利剑弹珠(3)
                       
                   </h5>
                   <p class="card-text"><div class='pg_sprite pg_sprite_PEG' style="transform:scale(2);margin:3px 10px;"></div>5&nbsp;&nbsp;<div class='pg_sprite pg_sprite_CRIT_PEG' style="transform:scale(2);margin:3px 10px;"></div>9</p>

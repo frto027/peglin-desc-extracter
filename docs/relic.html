@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-        <h1>遗物列表</h1><h5><a href="orb.html">弹珠列表</a></h5><div class="badge bg-primary">游戏版本:0.7.28</div>
+        <h1>遗物列表</h1><h5><a href="orb.html">弹珠列表</a></h5><div class="badge bg-primary">游戏版本:0.7.34</div>
         <hr>
         <div class="row row-cols-auto">
             <div class="col">
@@ -221,12 +221,12 @@
                         
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-success">Boss池</span>                 
                         
-                                     <!--span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span-->                
+                        
                         
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">所有攻击造成的<span class="pg_style_dmg_negative">普通伤害-2/暴击伤害-3</span>，但每次击中的 <sprite name=PEG> 都将得到升级<span class="pg_style_dmg_bonus">（伤害+ 2）</span>。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">所有弹珠的<span class="pg_style_dmg_negative">普通伤害-2/暴击伤害-3</span>，但每次触发的 <sprite name=PEG> 都将得到升级<span class="pg_style_dmg_bonus">（伤害+ 2）</span>。</li> </ul>
 
                 </div>
               </div>
@@ -318,7 +318,10 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">击中 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 会计算伤害。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item"><span class="pg_style_activate">触发</span> <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 会计算伤害。</li> </ul>
+                      <div class="alert alert-primary">
+                           <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                      </div>
 
                 </div>
               </div>
@@ -336,7 +339,7 @@
                                     <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">普通池</span>               
                         
                         
-                        
+                                     <!--span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span-->                
                         
                     </h5>
                   </div>
@@ -428,7 +431,7 @@
                                     <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">普通池</span>               
                         
                         
-                        
+                                     <!--span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span-->                
                         
                     </h5>
                   </div>
@@ -451,7 +454,7 @@
                                     <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">普通池</span>               
                         
                         
-                        
+                                     <!--span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span-->                
                         
                     </h5>
                   </div>
@@ -596,7 +599,7 @@
                   <hr />
                   <ul class="list-group list-group-flush"> <li class="list-group-item">对击中的敌人施加5层<span class="pg_style_blind">致盲</span>效果。</li> </ul>
                       <div class="alert alert-primary">
-                          当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10+X）% 的几率落空。
+                          当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10 + X）% 的几率落空。
                       </div>
 
                 </div>
@@ -822,7 +825,7 @@
                                     <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">普通池</span>               
                         
                         
-                        
+                                     <!--span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span-->                
                         
                     </h5>
                   </div>
@@ -1014,7 +1017,7 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">Every reload grants +2 <span class="pg_style_strength">Muscircle</span>.</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">每次重新装填弹珠后，你会获得2层<span class="pg_style_strength">强劲</span>状态。</li> </ul>
                       <div class="alert alert-primary">
                           当你处于<span class="pg_style_confuse">强劲 X</span>状态时，所有弹珠造成的普通伤害+ X/暴击伤害+ 0。
                       </div>
@@ -1031,7 +1034,7 @@
                 </div>
                 <div class="card-body">
                   <div style="text-align:center">
-                    <h5 class="card-title">一堆沙子
+                    <h5 class="card-title">一把沙子
                                     <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-secondary">普通池</span>               
                         
                         
@@ -1042,7 +1045,7 @@
                   <hr />
                   <ul class="list-group list-group-flush"> <li class="list-group-item">当一名敌人用近战攻击击中你时，对其施加10层<span class="pg_style_blind">致盲</span>状态。</li> </ul>
                       <div class="alert alert-primary">
-                          当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10+X）% 的几率落空。
+                          当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10 + X）% 的几率落空。
                       </div>
 
                 </div>
@@ -1066,10 +1069,56 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">每次重新装填弹珠后，你会获得1层<span class="pg_style_balance">圆满</span>效果。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">每次重新装填弹珠后，你会获得1层<span class="pg_style_balance">圆满</span>状态。</li> </ul>
                       <div class="alert alert-primary">
                           当你处于<span class="pg_style_confuse">圆满 X</span>状态时，所有弹珠造成的普通伤害+ X/暴击伤害+ X。
                       </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                  <div style="width:fit-content;margin:10px auto">
+                      <div class="pg_pic_lucky_penny_21300000"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div style="text-align:center">
+                    <h5 class="card-title">幸运硬币
+                        
+                        
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
+                                     <!--span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span-->                
+                        
+                    </h5>
+                  </div>
+                  <hr />
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">板面会包含2个额外的 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 。</li> </ul>
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                  <div style="width:fit-content;margin:10px auto">
+                      <div class="pg_pic_coin_single_21300000"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div style="text-align:center">
+                    <h5 class="card-title">最后的赌注
+                        
+                        
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
+                                     <!--span style="font-size:0.5rem;" class="badge rounded-pill text-bg-light">Debug池</span-->                
+                        
+                    </h5>
+                  </div>
+                  <hr />
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">板面上每有一个 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> ，攻击造成的<span class="pg_style_dmg_negative">普通伤害- 1</span>/<span class="pg_style_dmg_bonus">暴击伤害+ 1</span>。</li> </ul>
 
                 </div>
               </div>
@@ -1216,29 +1265,6 @@
               <div class="card" style="width: 18rem;margin:8px;">
                 <div style="text-align:center">
                   <div style="width:fit-content;margin:10px auto">
-                      <div class="pg_pic_lucky_penny_21300000"></div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div style="text-align:center">
-                    <h5 class="card-title">幸运硬币
-                        
-                        
-                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
-                        
-                        
-                    </h5>
-                  </div>
-                  <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">板面会包含2个额外的 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 。</li> </ul>
-
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 18rem;margin:8px;">
-                <div style="text-align:center">
-                  <div style="width:fit-content;margin:10px auto">
                       <div class="pg_pic_ration_satchel_21300000"></div>
                   </div>
                 </div>
@@ -1299,9 +1325,9 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">Projectile attacks have <span class="pg_style_overflow">Overflow</span>.</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">投掷类弹珠具有<span class="pg_style_overflow">伤害溢出</span>效果。</li> </ul>
                       <div class="alert alert-primary">
-                          <span class="pg_style_overflow">Overflow</span> causes excess damage to carry over to the next enemy.
+                          当弹珠拥有<span class="pg_style_overflow">伤害溢出</span>效果时，会将溢出的伤害传递至下一个敌人。
                       </div>
 
                 </div>
@@ -1397,9 +1423,9 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">All attacks have <span class="pg_style_echo">Echo 10</span> <span class="pg_style_dmg_bonus"></span></li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">所有攻击会带有<span class="pg_style_echo">回声 10</span>效果。<span class="pg_style_dmg_bonus"></span></li> </ul>
                       <div class="alert alert-primary">
-                          <span class="pg_style_echo">Echo X</span> deals X% of the previous attack damage as bonus damage
+                          当弹珠拥有<span class="pg_style_echo">回声 X</span>效果时，会以上一次攻击伤害的X% 作为附加伤害。
                       </div>
 
                 </div>
@@ -1446,7 +1472,10 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">额外击中暴击钉使伤害变为<span class="pg_style_dmg_bonus">1.3倍</span>。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item"><span class="pg_style_activate">Activating</span> multiple <div class="pg_sprite pg_sprite_CRIT_PEG"></div> increases damage per <div class="pg_sprite pg_sprite_PEG"></div> by (Crit Damage - Regular Damage).</li> </ul>
+                      <div class="alert alert-primary">
+                           <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                      </div>
 
                 </div>
               </div>
@@ -1561,7 +1590,10 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">击中 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 也会刷新板面。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item"><span class="pg_style_activate">触发</span> <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 也会刷新板面。</li> </ul>
+                      <div class="alert alert-primary">
+                           <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                      </div>
 
                 </div>
               </div>
@@ -1690,7 +1722,7 @@
                 </div>
                 <div class="card-body">
                   <div style="text-align:center">
-                    <h5 class="card-title">显示错误的长笛
+                    <h5 class="card-title">缺孔双簧管
                         
                         
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
@@ -1724,7 +1756,7 @@
                   <hr />
                   <ul class="list-group list-group-flush"> <li class="list-group-item"><div class="pg_sprite pg_sprite_BOMB"></div> 会在对敌人造成伤害的同时施加1层<span class="pg_style_blind">致盲</span>状态。</li> </ul>
                       <div class="alert alert-primary">
-                          当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10+X）% 的几率落空。
+                          当敌人处于<span class="pg_style_blind">致盲 X</span>状态时，他的攻击将有（10 + X）% 的几率落空。
                       </div>
 
                 </div>
@@ -1757,12 +1789,12 @@
               <div class="card" style="width: 18rem;margin:8px;">
                 <div style="text-align:center">
                   <div style="width:fit-content;margin:10px auto">
-                      <div class="pg_pic_coin_single_21300000"></div>
+                      <div class="pg_pic_pumpkin_pie_21300000"></div>
                   </div>
                 </div>
                 <div class="card-body">
                   <div style="text-align:center">
-                    <h5 class="card-title">Short Stack
+                    <h5 class="card-title">Pumpkin π
                         
                         
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
@@ -1771,7 +1803,30 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">板面上每有一个 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> ，攻击造成的<span class="pg_style_dmg_negative">普通伤害- 1</span>/<span class="pg_style_dmg_bonus">暴击伤害+ 1</span>。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">Each shot, a random slot becomes a portal that can teleport orbs to the top of the pegboard up to 3x.</li> </ul>
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;margin:8px;">
+                <div style="text-align:center">
+                  <div style="width:fit-content;margin:10px auto">
+                      <div class="pg_pic_safety_net_21300000"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div style="text-align:center">
+                    <h5 class="card-title">Safety Net
+                        
+                        
+                                      <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
+                        
+                        
+                    </h5>
+                  </div>
+                  <hr />
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">Orbs start with 5 <div class="pg_sprite pg_sprite_PEG"></div> worth of damage.</li> </ul>
 
                 </div>
               </div>

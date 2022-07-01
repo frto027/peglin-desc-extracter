@@ -146,6 +146,14 @@
     transform:scale(3.25);
     margin:18.0px;
 }
+.pg_pic_jack-orb-lantern_21300000{
+    image-rendering:pixelated;
+    background-image: url("pg_assets/jack-orb-lantern.png");
+    width:16px;
+    height:16px;
+    transform:scale(3.25);
+    margin:18.0px;
+}
 .pg_pic_thunderball_animation_16x16_21300004{
     image-rendering:pixelated;
     background-image: url("pg_assets/thunderball_animation_16x16.png");
@@ -685,6 +693,14 @@
     transform:scale(3.25);
     margin:18.0px;
 }
+.pg_pic_pumpkin_pie_21300000{
+    image-rendering:pixelated;
+    background-image: url("pg_assets/pumpkin_pie.png");
+    width:16px;
+    height:16px;
+    transform:scale(3.25);
+    margin:18.0px;
+}
 .pg_pic_puppet_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/puppet.png");
@@ -760,6 +776,14 @@
 .pg_pic_RingOfReuse_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/RingOfReuse.png");
+    width:16px;
+    height:16px;
+    transform:scale(3.25);
+    margin:18.0px;
+}
+.pg_pic_safety_net_21300000{
+    image-rendering:pixelated;
+    background-image: url("pg_assets/safety_net.png");
     width:16px;
     height:16px;
     transform:scale(3.25);
