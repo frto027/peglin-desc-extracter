@@ -14,6 +14,9 @@
   <body>
     <div class="container">
         <h1>弹珠列表</h1><h5><a href="relic.html">遗物列表</a></h5><div class="badge bg-primary">游戏版本:{{version}}</div>
+        {{#online_version}}
+          <div class="badge bg-success">在线本地化文档版本:{{online_version}}</div>
+        {{/online_version}}
         <hr>
         
         {{#typed_orbs}}

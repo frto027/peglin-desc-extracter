@@ -13,6 +13,7 @@
   <body>
     <div class="container">
         <h1>遗物列表</h1><h5><a href="orb.html">弹珠列表</a></h5><div class="badge bg-primary">游戏版本:0.7.34</div>
+          <div class="badge bg-success">在线本地化文档版本:1656726534910</div>
         <hr>
         <div class="row row-cols-auto">
             <div class="col">
@@ -646,7 +647,10 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">在战斗中每击中12次 <div class="pg_sprite pg_sprite_PEG"></div> <span class="pg_style_heal">恢复1点</span>血量。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">在战斗中每<span class="pg_style_activate">触发</span>12次 <div class="pg_sprite pg_sprite_PEG"></div> <span class="pg_style_heal">恢复1点</span>血量。</li> </ul>
+                      <div class="alert alert-primary">
+                           <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                      </div>
 
                 </div>
               </div>
@@ -1374,7 +1378,10 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">每击中2次 <div class="pg_sprite pg_sprite_PEG"></div> 立即对目标敌人造成1点伤害。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">每<span class="pg_style_activate">触发</span>2次 <div class="pg_sprite pg_sprite_PEG"></div> 立即对目标敌人造成<span class="pg_style_damage">1点伤害</span>。</li> </ul>
+                      <div class="alert alert-primary">
+                           <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                      </div>
 
                 </div>
               </div>
@@ -1472,7 +1479,7 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item"><span class="pg_style_activate">Activating</span> multiple <div class="pg_sprite pg_sprite_CRIT_PEG"></div> increases damage per <div class="pg_sprite pg_sprite_PEG"></div> by (Crit Damage - Regular Damage).</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item"><span class="pg_style_activate">触发</span>多个 <div class="pg_sprite pg_sprite_CRIT_PEG"></div> 会使每个 <div class="pg_sprite pg_sprite_PEG"></div> 的伤害增加（暴击伤害 - 普通伤害）。</li> </ul>
                       <div class="alert alert-primary">
                            <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
                       </div>
@@ -1794,7 +1801,7 @@
                 </div>
                 <div class="card-body">
                   <div style="text-align:center">
-                    <h5 class="card-title">Pumpkin π
+                    <h5 class="card-title">南瓜派
                         
                         
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
@@ -1803,7 +1810,7 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">Each shot, a random slot becomes a portal that can teleport orbs to the top of the pegboard up to 3x.</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">每次射出弹珠时，将随机一个底部掉落口变为传送门，可以把弹珠传送至板面顶部，最多重复3次。</li> </ul>
 
                 </div>
               </div>
@@ -1817,7 +1824,7 @@
                 </div>
                 <div class="card-body">
                   <div style="text-align:center">
-                    <h5 class="card-title">Safety Net
+                    <h5 class="card-title">安全网
                         
                         
                                       <span style="font-size:0.5rem;" class="badge rounded-pill text-bg-warning">稀有池</span>                 
@@ -1826,7 +1833,7 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">Orbs start with 5 <div class="pg_sprite pg_sprite_PEG"></div> worth of damage.</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">弹珠在射出时拥有等同于击中5个 <div class="pg_sprite pg_sprite_PEG"></div> 的伤害。</li> </ul>
 
                 </div>
               </div>

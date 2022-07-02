@@ -65,10 +65,35 @@ if not term_maps:
             term_maps[term["Term"]] = term["Languages"]
     buffer_save('term_maps.json',term_maps)
 
+######### download term_maps from online #######
+term_maps_online_config = buffered('term_maps_online.json')
+if not term_maps_online_config:
+    term_maps_online_config = dict()
+    print('generate term map online config')
+    with I2Language.open('r', encoding='utf8') as f:
+        obj = yaml.load(f,Loader=yaml.BaseLoader)
+        term_maps_online_config["Google_WebServiceURL"] = obj["MonoBehaviour"]["mSource"]["Google_WebServiceURL"]
+        term_maps_online_config["Google_SpreadsheetKey"] = obj["MonoBehaviour"]["mSource"]["Google_SpreadsheetKey"]
+        term_maps_online_config["Google_LastUpdatedVersion"] = obj["MonoBehaviour"]["mSource"]["Google_LastUpdatedVersion"]
+    buffer_save('term_maps_online.json',term_maps_online_config)
+
+import trans_reader
+
+term_maps_online_result = buffered('term_maps_online_result.json')
+if not term_maps_online_result:
+    term_maps_online_result = trans_reader.GetDictionary(term_maps_online_config["Google_WebServiceURL"], term_maps_online_config["Google_SpreadsheetKey"])
+buffer_save('term_maps_online_result.json', term_maps_online_result)
+
+LOCAL_VERSION = term_maps_online_config["Google_LastUpdatedVersion"]
+ONLINE_VERSION = term_maps_online_result["version"]
 
 def get_translate(index):
-    d = term_maps[index]
-    txt = d[language_id] or d[0]
+    online_d = term_maps_online_result["ret"]
+    if index in online_d:
+        txt = online_d[index]
+    else:
+        d = term_maps[index]
+        txt = d[language_id] or d[0]
     txt = re.split(r"\[i2s_[a-zA-Z]+\]",txt)[0]
     i2p_split = re.split(r"\[i2p_[a-zA-Z]+\]",txt)
     txt = i2p_split[0] if len(i2p_split[0]) > 0 else i2p_split[1]
@@ -479,16 +504,28 @@ for png in used_assets:
 print('generate orb.html...')
 with open('docs/orb.html','w',encoding='utf8') as f:
     with open('templates/orb.html.mustache','r',encoding='utf8') as template:
-        f.write(chevron.render(template, {"orbs":orb_info, "typed_orbs": typed_orb_info, "version":GAME_VERSION}))
+        f.write(chevron.render(template, {
+            "orbs":orb_info, 
+            "typed_orbs": typed_orb_info, 
+            "version":GAME_VERSION,
+            "online_version":ONLINE_VERSION if int(ONLINE_VERSION) > int(LOCAL_VERSION) else None
+        }))
 
 print('generate relic.html...')
 with open('docs/relic.html','w',encoding='utf8') as f:
     with open('templates/relic.html.mustache','r',encoding='utf8') as template:
-        f.write(chevron.render(template, {"relics":relic_infos, "version":GAME_VERSION}))
+        f.write(chevron.render(template, {
+            "relics":relic_infos, 
+            "version":GAME_VERSION, 
+            "online_version":ONLINE_VERSION if int(ONLINE_VERSION) > int(LOCAL_VERSION) else None
+            }))
 
 print('generate index.html')
 with open('docs/index.html','w',encoding='utf8') as f:
     with open('templates/index.html.mustache','r',encoding='utf8') as template:
-        f.write(chevron.render(template,{'version':GAME_VERSION}))
+        f.write(chevron.render(template,{
+            'version':GAME_VERSION, 
+            "online_version":ONLINE_VERSION if int(ONLINE_VERSION) > int(LOCAL_VERSION) else None
+            }))
 
 print('over')
