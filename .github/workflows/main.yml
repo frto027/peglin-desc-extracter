@@ -26,10 +26,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: build the check file
         run: |
-           cd $GITHUB_WORKSPACE,
+           cd $GITHUB_WORKSPACE
            git config user.email "602706150@qq.com"
            git config user.name "frto027.bot"
-           git checkout gh-pages,
-           git reset --hard master,
-           python3 online_checker.py,
+           git checkout gh-pages
+           git reset --hard master
+           python3 online_checker.py
            git push origin gh-pages -f
