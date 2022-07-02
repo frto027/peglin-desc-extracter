@@ -29,7 +29,6 @@ jobs:
            cd $GITHUB_WORKSPACE
            git config user.email "602706150@qq.com"
            git config user.name "frto027.bot"
-           git checkout gh-pages
-           git reset --hard master
+           git checkout -b gh-pages
            python3 online_checker.py
            git push origin gh-pages -f
