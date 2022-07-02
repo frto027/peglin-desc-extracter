@@ -14,14 +14,19 @@
         <p>报告时间：{{report_date}}</p>
 
         <p>图鉴使用的在线本地化文档版本:{{online_cache_version}}</p>
-        <p>最新在线本地化文档版本:{{online_version}}</p>
+        <p>游戏的最新在线本地化文档版本:{{online_version}}</p>
 
         <p>
           {{#need_update}}
-            在线文档该更新了！请等待作者重新构建此工程。
+            游戏的本地化文档更新了！请等待作者重新构建此工程。
           {{/need_update}}
           {{^need_update}}
-            文档已是最新版本，无需更新。
+            {{#version_consist}}
+              文档已是最新版本，无需更新。
+            {{/version_consist}}
+            {{^version_consist}}
+              文档不是最新版本，但中文没有变化，因此无需更新图鉴。
+            {{/version_consist}}
           {{/need_update}}
         </p>
         <hr />

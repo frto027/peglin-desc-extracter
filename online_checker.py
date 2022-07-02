@@ -24,13 +24,24 @@ term_maps_online_result = trans_reader.GetDictionary(term_maps_online_config["Go
 ONLINE_VERSION_CACHED = term_maps_online_result_cached["version"]
 ONLINE_VERSION = term_maps_online_result["version"]
 
+old = term_maps_online_result_cached["ret"]
+new = term_maps_online_result["ret"]
+
+need_update_cn_text = False
+
+for k in new:
+    if (not k in old) or old[k] != new[k]:
+        need_update_cn_text = True
+        break
+
 with open('docs/online_check.html','w',encoding='utf8') as f:
     with open('templates/online_check.html.mustache','r',encoding='utf8') as template:
         f.write(chevron.render(template,{
             'online_cache_version':ONLINE_VERSION_CACHED,
             'online_version':ONLINE_VERSION,
             'report_date': now,
-            'need_update':ONLINE_VERSION_CACHED != ONLINE_VERSION,
+            'need_update': need_update_cn_text,
+            'version_consist':ONLINE_VERSION_CACHED == ONLINE_VERSION,
             }))
 
 
