@@ -6,7 +6,7 @@ import json
 
 from datetime import datetime
 from zoneinfo import ZoneInfo
-now = datetime.now(pytz.timezone('Asia/Shanghai')).strftime("%Y年%m月%d日 %H:%S")
+now = datetime.now(pytz.timezone('Asia/Shanghai')).strftime("%Y年%m月%d日 %H:%M")
 
 def buffered(path, default = None):
     path = pathlib.Path('buffers') / path
