@@ -22,6 +22,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
 
       # Runs a single command using the runners shell
       - name: build the check file
@@ -30,6 +34,6 @@ jobs:
            git config user.email "602706150@qq.com"
            git config user.name "frto027.bot"
            git checkout -b gh-pages
-           python3 -m pip install pyyaml chevron pytz
-           python3 online_checker.py
+           python -m pip install pyyaml chevron pytz
+           python online_checker.py
            git push origin gh-pages -f
