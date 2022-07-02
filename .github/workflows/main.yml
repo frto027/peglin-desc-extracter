@@ -36,6 +36,6 @@ jobs:
            git checkout -b gh-pages
            python -m pip install pyyaml chevron pytz
            python online_checker.py
-           git add *
+           git add docs/*
            git commit -m "Robot Update"
            git push origin gh-pages -f
