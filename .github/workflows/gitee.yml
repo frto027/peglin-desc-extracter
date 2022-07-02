@@ -27,8 +27,7 @@ jobs:
       - name: sync with gitee
       - env:
           GITEEKEY: ${{ secrets.GITEEKEY }}
-
-        run: |
+      - run: |
           cd $GITHUB_WORKSPACE
           echo $GITEEKEY > ~/.ssh/id_rsa
           git remote add gitee git@gitee.com:frto027/peglin-desc-extracter.git
