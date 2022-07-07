@@ -146,11 +146,12 @@
     transform:scale(3.25);
     margin:18.0px;
 }
-.pg_pic_jack-orb-lantern_21300000{
+.pg_pic_jackorblantern_21300010{
     image-rendering:pixelated;
-    background-image: url("pg_assets/jack-orb-lantern.png");
+    background-image: url("pg_assets/jackorblantern.png");
     width:16px;
     height:16px;
+    background-position: -0px -0.0px;
     transform:scale(3.25);
     margin:18.0px;
 }
@@ -323,6 +324,22 @@
     transform:scale(3.25);
     margin:18.0px;
 }
+.pg_pic_crit_fleece_21300000{
+    image-rendering:pixelated;
+    background-image: url("pg_assets/crit_fleece.png");
+    width:16px;
+    height:16px;
+    transform:scale(3.25);
+    margin:18.0px;
+}
+.pg_pic_material_11_21300000{
+    image-rendering:pixelated;
+    background-image: url("pg_assets/material_11.png");
+    width:16px;
+    height:16px;
+    transform:scale(3.25);
+    margin:18.0px;
+}
 .pg_pic_fruit_01a_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/fruit_01a.png");
@@ -414,14 +431,6 @@
 .pg_pic_cookie_21300000{
     image-rendering:pixelated;
     background-image: url("pg_assets/cookie.png");
-    width:16px;
-    height:16px;
-    transform:scale(3.25);
-    margin:18.0px;
-}
-.pg_pic_crit_fleece_21300000{
-    image-rendering:pixelated;
-    background-image: url("pg_assets/crit_fleece.png");
     width:16px;
     height:16px;
     transform:scale(3.25);
