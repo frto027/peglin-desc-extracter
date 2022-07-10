@@ -13,7 +13,7 @@
   <body>
     <div class="container">
         <h1>遗物列表</h1><h5><a href="orb.html">弹珠列表</a></h5><div class="badge bg-primary">游戏版本:0.7.35</div>
-          <a href="https://frto027.github.io/peglin-desc-extracter/online_check.html" class="link-light badge bg-success">在线本地化文档版本:1657134660219</a>
+          <a href="https://frto027.github.io/peglin-desc-extracter/online_check.html" class="link-light badge bg-success">在线本地化文档版本:1657439339901</a>
         <hr>
         <div class="row row-cols-auto">
             <div class="col">
@@ -368,7 +368,10 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item"><div class="pg_sprite pg_sprite_BOMB"></div> 被引爆时会清除附近钉子。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">引爆 <div class="pg_sprite pg_sprite_BOMB"></div> 时会<span class="pg_style_activate">触发</span>附近钉子。</li> </ul>
+                      <div class="alert alert-primary">
+                           <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                      </div>
 
                 </div>
               </div>
@@ -1139,7 +1142,7 @@
                 </div>
                 <div class="card-body">
                   <div style="text-align:center">
-                    <h5 class="card-title">古代羊毛
+                    <h5 class="card-title">上古羊毛
                         
                         
                         
@@ -1715,7 +1718,10 @@
                     </h5>
                   </div>
                   <hr />
-                  <ul class="list-group list-group-flush"> <li class="list-group-item">击中 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> 时会清除附近钉子。</li> </ul>
+                  <ul class="list-group list-group-flush"> <li class="list-group-item">击中 <div class="pg_sprite pg_sprite_REFRESH_PEG"></div> 时会<span class="pg_style_activate">触发</span>附近钉子。</li> </ul>
+                      <div class="alert alert-primary">
+                           <div class="pg_sprite pg_sprite_PEG"></div> 在被弹珠或其他效果（如电击溅射、连带清除和击中镜像钉）<span class="pg_style_hit">击中</span>后，将被<span class="pg_style_activate">触发</span>。
+                      </div>
 
                 </div>
               </div>

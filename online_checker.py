@@ -1,5 +1,7 @@
 from datetime import date
+from os import execv
 import pathlib
+import sys
 import chevron
 import pytz
 import json
@@ -44,4 +46,6 @@ with open('docs/online_check.html','w',encoding='utf8') as f:
             'version_consist':ONLINE_VERSION_CACHED == ONLINE_VERSION,
             }))
 
+if need_update_cn_text:
+    execv('python orb.py -u')
 

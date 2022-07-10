@@ -3,6 +3,7 @@
 import json
 import pathlib
 import re
+import sys
 from telnetlib import theNULL
 from typing import List
 from unittest import loader
@@ -10,6 +11,13 @@ import yaml
 import config
 import chevron
 import cv2
+
+
+UPDATE_MODE = False
+
+for arg in sys.argv:
+    if arg == '-u':
+        UPDATE_MODE = True
 
 PROJECT_PATH = config.PROJECT_PATH
 
@@ -66,7 +74,8 @@ if not term_maps:
     buffer_save('term_maps.json',term_maps)
 
 ######### download term_maps from online #######
-term_maps_online_config = buffered('term_maps_online.json')
+term_maps_online_config = buffered('term_maps_online.json') if not UPDATE_MODE else None
+
 if not term_maps_online_config:
     term_maps_online_config = dict()
     print('generate term map online config')
@@ -118,6 +127,18 @@ def parse_desc(desc, dict = {}, keyword_out = None):
     desc = re.sub(r'\{\[([a-zA-Z0-9_]+)\]\}', rep_var, desc)
     desc = desc.replace('\n','<br/>', -1)
     return desc
+
+def lazy_translate(index, dict = {}, keyword_out = None):
+    trans = get_translate(index)
+    parse_desc(trans, dict, keyword_out)
+
+    return{
+        'index':index,
+        'dict':dict
+    }
+
+def fill_lazy_translate(obj, keyword_out = None):
+    return parse_desc(get_translate(obj['index']),obj['dict'], keyword_out)
 
 #orb name -> [orb desc(level1), orb desc(level2), orb desc(level3)]
 
@@ -252,23 +273,23 @@ if not orb_info:
             if tutorial_obj:
                 tutorial = []
                 for t in tutorial_obj:
-                    tutorial.append({'desc': parse_desc(get_translate('Tutorial/' + t))})
+                    tutorial.append({'desc': lazy_translate('Tutorial/' + t)})
                 tutorial[-1]['last'] = True
             # -- outputs
 
             descs = []
             descs_keywords = []
             for descitem in desc_obj["locDescStrings"]:
-                descs.append({"desc":parse_desc(get_translate('Orbs/' + descitem),args, descs_keywords)})
+                descs.append({"desc":lazy_translate('Orbs/' + descitem,args, descs_keywords)})
 
             orb_info.append({
-                "name" :get_translate('Orbs/' + desc_obj["locNameString"] + '_name'),
+                "name" :lazy_translate('Orbs/' + desc_obj["locNameString"] + '_name'),
                 "level" : desc_obj["Level"],
                 "dmg" : desc_obj["DamagePerPeg"],
                 "cdmg" : desc_obj["CritDamagePerPeg"],
                 "descs":descs,
                 "sprite" : style_name,
-                "keywords" : descs_keywords,
+                "keywords" : descs_keywords, # lazy reinit
                 "guid" : orb_file_guid,
                 "pool" : {},
                 "has_tutorial": tutorial != None,
@@ -307,23 +328,23 @@ if not orb_info:
 typed_orb_info_dict = dict()
 
 for orb in orb_info:
-    if not orb['name'] in typed_orb_info_dict:
-        typed_orb_info_dict[orb['name']] = {"orbs":[]}
-    typed_orb_info_dict[orb['name']]["orbs"].append(orb)
+    name = fill_lazy_translate(orb['name'])
+    if not name in typed_orb_info_dict:
+        typed_orb_info_dict[name] = {"orbs":[]}
+    typed_orb_info_dict[name]["orbs"].append(orb)
 typed_orb_info = []
 typed_orb_info = list(typed_orb_info_dict.values())
 
 
 ########## relics #########
 
-with (PROJECT_PATH / 'Assets' / 'MonoScript' / 'Assembly-CSharp' / 'Relics' / 'RelicSet.cs.meta').open('r',encoding='utf8') as f:    
-    RelicSetGuid = yaml.load(f,yaml.BaseLoader)['guid']
-with (PROJECT_PATH / 'Assets' / 'MonoScript' / 'Assembly-CSharp' / 'Relics' / 'Relic.cs.meta').open('r',encoding='utf8') as f:    
-    RelicGuid = yaml.load(f,yaml.BaseLoader)['guid']
 
 RelicSets = buffered('relic_file_sets.json')
 if not RelicSets:
     print('generate RelicSets...')
+    with (PROJECT_PATH / 'Assets' / 'MonoScript' / 'Assembly-CSharp' / 'Relics' / 'RelicSet.cs.meta').open('r',encoding='utf8') as f:    
+        RelicSetGuid = yaml.load(f,yaml.BaseLoader)['guid']
+
     RelicSets = []
     for asset in (PROJECT_PATH / 'Assets' / 'MonoBehaviour').glob('*.asset'):
         with asset.open('r',encoding='utf8') as f:
@@ -342,6 +363,9 @@ if not RelicSets:
 RelicInfoMap = buffered('relic_info_map.json')
 if not RelicInfoMap:
     print("generate RelicInfoMap...")
+    with (PROJECT_PATH / 'Assets' / 'MonoScript' / 'Assembly-CSharp' / 'Relics' / 'Relic.cs.meta').open('r',encoding='utf8') as f:    
+        RelicGuid = yaml.load(f,yaml.BaseLoader)['guid']
+
     RelicInfoMap = dict()
     for RelicSet in RelicSets:
         name = RelicSet['m_Name']
@@ -393,9 +417,9 @@ if not RelicInfoMap:
             RelicInfoMap[RelicName] = {}
         RelicInfoMap[RelicName]['name'] = RelicName
         RelicInfoMap[RelicName]['sprite'] = style_name
-        RelicInfoMap[RelicName]['locName'] = get_translate('Relics/' + locKey + '_name')
+        RelicInfoMap[RelicName]['locName'] = lazy_translate('Relics/' + locKey + '_name')
         desc_keywords = []
-        RelicInfoMap[RelicName]['locDesc'] = parse_desc(get_translate('Relics/' + locKey + '_desc' + descMod),global_local_params, desc_keywords)
+        RelicInfoMap[RelicName]['locDesc'] = lazy_translate('Relics/' + locKey + '_desc' + descMod,global_local_params, desc_keywords)
         RelicInfoMap[RelicName]['keywords'] = desc_keywords
     buffer_save('relic_info_map.json',RelicInfoMap)
 
@@ -415,7 +439,7 @@ if not orb_keywords_map:
             target = mono['MonoBehaviour']
             if '_keywordDescriptionMapping' in target:
                 for item in target['_keywordDescriptionMapping']:
-                    orb_keywords_map[item['Keyword']] =  parse_desc(get_translate('Statuses/' + item['DescriptionLoc']),global_local_params)
+                    orb_keywords_map[item['Keyword']] =  lazy_translate('Statuses/' + item['DescriptionLoc'],global_local_params)
     buffer_save('orb_keyword_map.json', orb_keywords_map)
 
 
@@ -432,10 +456,50 @@ if not relic_keywords_map:
             target = mono['MonoBehaviour']
             if '_keywordDescriptionMapping' in target:
                 for item in target['_keywordDescriptionMapping']:
-                    relic_keywords_map[item['Keyword']] =  parse_desc(get_translate('Statuses/' + item['DescriptionLoc']),global_local_params)
+                    relic_keywords_map[item['Keyword']] =  lazy_translate('Statuses/' + item['DescriptionLoc'],global_local_params)
     buffer_save('relic_keyword_map.json',relic_keywords_map)
 
-# inject keywords into orb #
+
+########## get game version ########
+GAME_VERSION = buffered('game_version.json')
+if not GAME_VERSION:
+    with (PROJECT_PATH / 'ProjectSettings' / 'ProjectSettings.asset').open('r', encoding='utf8') as f:
+        GAME_VERSION = yaml.load(config.purge(f), yaml.SafeLoader)['PlayerSettings']['bundleVersion']
+buffer_save('game_version.json',GAME_VERSION)
+
+print('game version: ' + GAME_VERSION)
+
+
+########## generate sprite css ##############
+
+with open('docs/pg_orb_sprite.css','w', encoding='utf8') as f:
+    with open('templates/pg_orb_sprite.css.mustache','r', encoding='utf8') as template:
+        f.write(chevron.render(template, {
+            'assets' :list(generated_sprites_css.values())
+        }))
+
+
+########## update lazy translate step 1 ###########
+
+for orb in orb_info:
+    keywords = []
+    if "tutorial" in orb and orb['tutorial'] != None:
+        for t in orb["tutorial"]:
+            t['desc'] = fill_lazy_translate(t['desc'], keywords)
+    for d in orb['descs']:
+        d['desc'] = fill_lazy_translate(d['desc'])
+    orb['name'] = fill_lazy_translate(orb['name'])
+    orb['keywords'] = keywords
+
+
+for rname in RelicInfoMap:
+    keywords = []
+    RelicInfoMap[rname]['locName'] = fill_lazy_translate(RelicInfoMap[rname]['locName'])
+    RelicInfoMap[rname]['locDesc'] = fill_lazy_translate(RelicInfoMap[rname]['locDesc'], keywords)
+    RelicInfoMap[rname]['keywords'] = keywords
+
+########## reupdate keywords ######################
+
 for orb in orb_info:
     keywords = []
     generated_keywords = set()
@@ -471,20 +535,18 @@ for relic in relic_infos:
     relic['keywords'] = keywords
     relic['has_keywords'] = len(keywords) > 0
 
-########## get game version ########
+########## update lazy translate step 2 ###########
 
-with (PROJECT_PATH / 'ProjectSettings' / 'ProjectSettings.asset').open('r', encoding='utf8') as f:
-    GAME_VERSION = yaml.load(config.purge(f), yaml.SafeLoader)['PlayerSettings']['bundleVersion']
-print('game version: ' + GAME_VERSION)
-
-
-########## generate sprite css ##############
-
-with open('docs/pg_orb_sprite.css','w', encoding='utf8') as f:
-    with open('templates/pg_orb_sprite.css.mustache','r', encoding='utf8') as template:
-        f.write(chevron.render(template, {
-            'assets' :list(generated_sprites_css.values())
-        }))
+# orb_keywords_map
+for orb in orb_info:
+    if 'keywords' in orb:
+        for k in orb['keywords']:
+            k['keyword_desc'] = fill_lazy_translate(k['keyword_desc'])
+# relic_keywords_map
+for relic in relic_infos:
+    if 'keywords' in relic:
+        for k in relic['keywords']:
+            k['keyword_desc'] = fill_lazy_translate(k['keyword_desc'])
 
 ########## copy assets ##########
 
