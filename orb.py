@@ -74,7 +74,7 @@ if not term_maps:
     buffer_save('term_maps.json',term_maps)
 
 ######### download term_maps from online #######
-term_maps_online_config = buffered('term_maps_online.json') if not UPDATE_MODE else None
+term_maps_online_config = buffered('term_maps_online.json')
 
 if not term_maps_online_config:
     term_maps_online_config = dict()
@@ -88,7 +88,7 @@ if not term_maps_online_config:
 
 import trans_reader
 
-term_maps_online_result = buffered('term_maps_online_result.json')
+term_maps_online_result = buffered('term_maps_online_result.json') if not UPDATE_MODE else None
 if not term_maps_online_result:
     term_maps_online_result = trans_reader.GetDictionary(term_maps_online_config["Google_WebServiceURL"], term_maps_online_config["Google_SpreadsheetKey"])
 buffer_save('term_maps_online_result.json', term_maps_online_result)

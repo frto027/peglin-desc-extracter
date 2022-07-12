@@ -1,5 +1,4 @@
-from datetime import date
-from os import execv
+import subprocess
 import pathlib
 import sys
 import chevron
@@ -7,7 +6,6 @@ import pytz
 import json
 
 from datetime import datetime
-from zoneinfo import ZoneInfo
 now = datetime.now(pytz.timezone('Asia/Shanghai')).strftime("%Y年%m月%d日 %H:%M")
 
 def buffered(path, default = None):
@@ -47,5 +45,6 @@ with open('docs/online_check.html','w',encoding='utf8') as f:
             }))
 
 if need_update_cn_text:
-    execv('python orb.py -u')
-
+    print("need auto update, run orb.py...")
+    subprocess.call((sys.executable, 'orb.py', '-u'))
+    print("auto update end.")
