@@ -37,7 +37,7 @@ jobs:
            git config user.email "602706150@qq.com"
            git config user.name "frto027.bot"
            git checkout -b gh-pages
-           python -m pip install pyyaml chevron pytz
+           python -m pip install pyyaml chevron pytz opencv-python
            python online_checker.py
            git add docs/*
            git commit -m "Robot Update"
