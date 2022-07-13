@@ -29,10 +29,26 @@ new = term_maps_online_result["ret"]
 
 need_update_cn_text = False
 
+
+modified = []
+
 for k in new:
-    if (not k in old) or old[k] != new[k]:
+    if not k in old:
+        modified.append({
+            'new':True,
+            'key':k,
+            'text':new[k] if new[k] != '' else '<空值>',
+        })
+        if new[k] != '':
+            need_update_cn_text = True
+    elif old[k] != new[k]:
         need_update_cn_text = True
-        break
+        modified.append({
+            'update':True,
+            'key':k,
+            'old-text':old[k] if old[k] != '' else '<空值>',
+            'text':new[k] if new[k] != '' else '<空值>',
+        })        
 
 with open('docs/online_check.html','w',encoding='utf8') as f:
     with open('templates/online_check.html.mustache','r',encoding='utf8') as template:
@@ -42,6 +58,7 @@ with open('docs/online_check.html','w',encoding='utf8') as f:
             'report_date': now,
             'need_update': need_update_cn_text,
             'version_consist':ONLINE_VERSION_CACHED == ONLINE_VERSION,
+            'modified':modified,
             }))
 
 if need_update_cn_text:

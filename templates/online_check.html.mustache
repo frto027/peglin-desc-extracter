@@ -31,6 +31,53 @@
         </p>
         <hr />
 
+        <h4>简易更新报告(自{{online_cache_version}}版本起，至{{online_version}}的新增变更)</h4>
+        <table class="table">
+          <thead>
+            <th scope="col">索引</th>
+            <th scope="col">状态</th>
+            <th scope="col">旧值</th>
+            <th scope="col">新值</th>
+          </thead>
+
+          <tbody>
+            {{#modified}}
+            <tr>
+              <th scope="row">
+              {{key}}
+              </th>
+            
+
+            <td>
+              {{#new}}
+              新增
+              {{/new}}
+              {{#update}}
+              更新
+              {{/update}}
+            </td>
+
+            <td>
+            {{#new}}
+            /
+            {{/new}}
+            {{#update}}
+              {{old-text}}
+            {{/update}}
+            </td>
+
+            <td>
+              {{text}}
+            </td>
+            </tr>
+            {{/modified}}
+
+
+          </tbody>
+
+        </table>
+        <hr />
+
         <p>本图鉴内容由程序根据游戏代码自动生成，程序作者frto027(<a href="https://gitee.com/frto027">gitee</a>，<a href="https://github.com/frto027">github</a>，<a href="https://space.bilibili.com/11948678">bilibili</a>)。</p>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
