@@ -27,5 +27,6 @@ jobs:
 
       - name: push it to gitee
         run: |
+          git fetch --unshallow
           git remote add gitee git@gitee.com:frto027/peglin-desc-extracter.git
           git push gitee gh-pages -f
