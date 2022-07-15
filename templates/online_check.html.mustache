@@ -31,7 +31,8 @@
         </p>
         <hr />
 
-        <h4>简易更新报告(自{{online_cache_version}}版本起，至{{online_version}}的新增变更)</h4>
+        {{#has_modified}}
+        <h4>简易更新报告</h4>
         <table class="table">
           <thead>
             <th scope="col">索引</th>
@@ -76,7 +77,9 @@
           </tbody>
 
         </table>
+        <p>(自{{online_cache_version}}版本起，至{{online_version}}的新增变更)</p>
         <hr />
+        {{/has_modified}}
 
         <p>本图鉴内容由程序根据游戏代码自动生成，程序作者frto027(<a href="https://gitee.com/frto027">gitee</a>，<a href="https://github.com/frto027">github</a>，<a href="https://space.bilibili.com/11948678">bilibili</a>)。</p>
     </div>

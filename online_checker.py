@@ -59,6 +59,7 @@ with open('docs/online_check.html','w',encoding='utf8') as f:
             'need_update': need_update_cn_text,
             'version_consist':ONLINE_VERSION_CACHED == ONLINE_VERSION,
             'modified':modified,
+            'has_modified':len(modified) > 0,
             }))
 
 if need_update_cn_text:
