@@ -3,9 +3,9 @@
 name: sync-with-gitee
 
 # Controls when the workflow will run
-on:
-  push:
-    branches: [ "gh-pages" ]
+on:    
+  schedule:
+    - cron:  '30 6 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,11 +22,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
+          ref: 'gh-pages'
+          fetch-depth: 0
           ssh-key: ${{secrets.GITEEKEY}}
           ssh-known-hosts: 'gitee.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMzG3r+88lWSDK9fyjcZmYsWGDBDmGoAasKMAmjoFloGt9HRQX2Qp4f9FY2XK/hsHYinvoh5Xytl9iaUNUWMfYR8q6VEMtOO87DgoAFcfKZHt0/nbAg9RoNTKYt6v8tPwYpr7N0JP/01nE4LFsNDnstr6H0bXSAzbKWCETLZfdPV4l2uSpRn3bU0ugoZ0aSKz5Dc/IloBfGCTvkSsxUydMRd/Chpjt6VxncDbp+Fa6pzsseK8OQzrg6Fgc5783EN3EQqZ2skqyCwExtx95BJlfx1B3luZnWfpkwNDnrZRT/Qx0OrWqyf0q6f9uQr+UG1S8qDcUn3e/9onq3rwBri8/'
 
       - name: push it to gitee
         run: |
-          git fetch --unshallow
           git remote add gitee git@gitee.com:frto027/peglin-desc-extracter.git
           git push gitee gh-pages -f
