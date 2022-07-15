@@ -485,9 +485,9 @@ for orb in orb_info:
     keywords = []
     if "tutorial" in orb and orb['tutorial'] != None:
         for t in orb["tutorial"]:
-            t['desc'] = fill_lazy_translate(t['desc'], keywords)
+            t['desc'] = fill_lazy_translate(t['desc'])
     for d in orb['descs']:
-        d['desc'] = fill_lazy_translate(d['desc'])
+        d['desc'] = fill_lazy_translate(d['desc'], keywords)
     orb['name'] = fill_lazy_translate(orb['name'])
     orb['keywords'] = keywords
 
